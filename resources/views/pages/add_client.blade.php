@@ -2,7 +2,12 @@
 
 @section('title', 'Add Client')
 
+@section('stylesheet')
+    <link href="{{asset('assets/plugins/summernote/css/summernote.css')}}" rel="stylesheet" type="text/css" media="screen">
+@endsection
+
 @section('content')
+    <form action="">
     <div id="rootwizard" class="m-t-10">
         <!-- Nav tabs -->
         <ul class="nav nav-tabs nav-tabs-linetriangle nav-tabs-separator nav-stack-sm" role="tablist" data-init-reponsive-tabs="dropdownfx">
@@ -16,12 +21,16 @@
                 <a class="" data-toggle="tab" href="#tab3" data-target="#tab3" role="tab"><i class="fa fa-info tab-icon"></i> <span>Body Info</span></a>
             </li>
             <li class="nav-item">
-                <a class="" data-toggle="tab" href="#tab4" data-target="#tab4" role="tab"><i class="fa fa-clock-o tab-icon"></i> <span>Finish</span></a>
+                <a class="" data-toggle="tab" href="#tab4" data-target="#tab4" role="tab"><i class="fa fa-clock-o tab-icon"></i> <span>Other Details</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="" data-toggle="tab" href="#tab5" data-target="#tab5" role="tab"><i class="fa fa-clock-o tab-icon"></i> <span>Diet Plan</span></a>
             </li>
         </ul>
         <!-- Tab panes -->
+
         <div class="tab-content">
-            
+
             <div class="tab-pane padding-20 sm-no-padding active slide-left" id="tab1">
                 <div class="row row-same-height">
                     <div class="col-md-6 b-r b-dashed b-grey sm-b-b">
@@ -1048,6 +1057,16 @@
                     </div>
                 </div>
             </div>
+            <div class="tab-pane slide-left padding-20 sm-no-padding" id="tab5">
+                <div class="row row-same-height">
+                    <div class="col-lg-12">
+                        <div class="summernote-wrapper">
+                            <div id="summernote">Diet Plan</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="padding-20 sm-padding-5 sm-m-b-20 sm-m-t-20 bg-white clearfix">
                 <ul class="pager wizard no-style">
                     <li class="next">
@@ -1083,9 +1102,26 @@
             </div>
         </div>
     </div>
+    </form>
 @endsection
 
 @section('script')
+    <script src="assets/plugins/summernote/js/summernote.min.js" type="text/javascript"></script>
+    <script>
+        $('#summernote').summernote({
+            height: 300,
+            toolbar: [
+                // [groupName, [list of button]]
+                ['style', ['bold', 'italic', 'underline', 'clear']],
+                ['font', ['strikethrough', 'superscript', 'subscript']],
+                ['fontsize', ['fontsize']],
+                ['color', ['color']],
+                ['para', ['ul', 'ol', 'paragraph']],
+                ['height', ['height']]
+            ]
+        });
+    </script>
+
     <script>
         $(document).ready(function() {
             $('#myDatepicker').datepicker();
