@@ -21,11 +21,12 @@
         </ul>
         <!-- Tab panes -->
         <div class="tab-content">
+            
             <div class="tab-pane padding-20 sm-no-padding active slide-left" id="tab1">
                 <div class="row row-same-height">
                     <div class="col-md-6 b-r b-dashed b-grey sm-b-b">
                         <div class="padding-30 sm-padding-5 sm-m-t-15 ">
-                            <form action="">
+
                                 <div class="">
                                     <div class="row clearfix">
                                         <div class="col-sm-6">
@@ -292,12 +293,12 @@
                                         </div>
                                     </div>
                                 </div>
-                            </form>
+
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="padding-30 sm-padding-5">
-                            <form role="form">
+
 
 
 
@@ -587,7 +588,7 @@
                                     </div>
 
                                 </div>
-                            </form>
+
                         </div>
                     </div>
                 </div>
@@ -597,7 +598,7 @@
 
                     <div class="col-md-6 b-r b-dashed b-grey sm-b-b">
                         <div class="padding-30 sm-padding-5">
-                            <form role="form">
+
                                 <div class="">
                                     <p>Details on Time</p>
                                     <div class="row">
@@ -683,12 +684,12 @@
                                 <br>
 
 
-                            </form>
+
                         </div>
                     </div>
                     <div class="col-md-6 ">
                         <div class="padding-30 sm-padding-5">
-                            <form role="form">
+
                                 <p>Details on Food</p>
                                 <div class="">
                                     <div class="row clearfix">
@@ -808,7 +809,7 @@
                                 <br>
 
 
-                            </form>
+
                         </div>
                     </div>
                 </div>
@@ -886,7 +887,7 @@
                     </div>
                     <div class="col-6">
                         <div class="padding-30 sm-padding-5">
-                            <form role="form">
+
                                 <div class="">
                                     <p>Details on Fat in Body</p>
 
@@ -952,7 +953,7 @@
                                 </div>
 
 
-                            </form>
+
                         </div>
                     </div>
                 </div>
@@ -969,7 +970,7 @@
                     </div>
                     <div class="col-md-7">
                         <div class="padding-30 sm-padding-5">
-                            <form role="form">
+
                                 <div class="">
                                     <div class="row">
                                         <div class="col-6">
@@ -1042,7 +1043,7 @@
                                 </div>
 
 
-                            </form>
+
                         </div>
                     </div>
                 </div>
