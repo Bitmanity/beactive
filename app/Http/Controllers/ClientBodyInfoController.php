@@ -4,12 +4,15 @@ namespace App\Http\Controllers;
 
 use App\ClientBodyInfo;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Mockery\Exception;
 
 class ClientBodyInfoController extends Controller
 {
     public static function form(Request $request,$client_id)
     {
         $id = $request->get('id');
+        $user = Auth::user();
         if($id)
         {
             $id = $request->get('client_body_info_id');
@@ -17,6 +20,7 @@ class ClientBodyInfoController extends Controller
         }
         else {
             $client_body_info = new ClientBodyInfo();
+            $client_body_info->created_by = $user->id;
         }
         $client_body_info->client_id = $client_id;
         $client_body_info->height = $request->get('height');
@@ -35,6 +39,15 @@ class ClientBodyInfoController extends Controller
         $client_body_info->leg_sub_fat = $request->get('leg_sub_fat');
         $client_body_info->trun_ske_muscle = $request->get('trun_ske_muscle');
         $client_body_info->leg_ske_muscle = $request->get('leg_ske_muscle');
+        $client_body_info->updated_by = $user->id;
+        try{
 
+            $client_body_info->save();
+        }
+        catch (Exception $e)
+        {
+
+        }
+        return;
     }
 }

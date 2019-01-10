@@ -230,9 +230,9 @@
                                                 <label class="">Favourite Food</label>
                                                 <select name="food_type" class="full-width" data-placeholder="Select Country" data-init-plugin="select2">
                                                     <!-- <optgroup label="Alaskan/Hawaiian Time Zone"> -->
-                                                    <option value="low">Only Veg </option>
-                                                    <option value="medium">Only Non-Veg</option>
-                                                    <option value="high">Veg & Non-Veg</option>
+                                                    <option value=1>Only Veg </option>
+                                                    <option value=2>Only Non-Veg</option>
+                                                    <option value=3>Veg & Non-Veg</option>
                                                     <!-- </optgroup> -->
                                                 </select>
                                             </div>
@@ -599,7 +599,9 @@
 
     <script>
         $(document).ready(function() {
-            $('#myDatepicker').datepicker();
+            $('.date').datepicker({
+                format: 'dd/mm/yyyy'
+            });
         });
         $('#summernote').summernote({
             toolbar: [

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Client;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Mockery\Exception;
 
 class ClientController extends Controller
@@ -11,9 +12,12 @@ class ClientController extends Controller
     public function form(Request $request)
     {
         $id = $request->get('id');
+        $user = Auth::user();
+        dd($request->drinks);
         if($id == null)
         {
             $client = new Client();
+            $client->created_by = $user->id;
         }
         else
         {
@@ -37,6 +41,7 @@ class ClientController extends Controller
         $client->advance = $request->advance;
         $client->balance = $request->balance;
         $client->diet_schedule = $request->diet_schedule;
+        $client->updated_by = $user->id;
         try{
 
             $client->save();
