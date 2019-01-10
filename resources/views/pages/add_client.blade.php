@@ -227,12 +227,11 @@
                                     <div class="row clearfix">
                                         <div class="col-6">
                                             <div class="form-group form-group-default form-group-default-select2 ">
-                                                <label class="">Favourite Food</label>
+                                                <label class="">Food Type</label>
                                                 <select name="food_type" class="full-width" data-placeholder="Select Country" data-init-plugin="select2">
                                                     <!-- <optgroup label="Alaskan/Hawaiian Time Zone"> -->
-                                                    <option value=1>Only Veg </option>
-                                                    <option value=2>Only Non-Veg</option>
-                                                    <option value=3>Veg & Non-Veg</option>
+                                                    <option value='Veg'>Veg</option>
+                                                    <option value='Non-Veg'>Non-Veg</option>
                                                     <!-- </optgroup> -->
                                                 </select>
                                             </div>
@@ -250,11 +249,11 @@
                                             <div class="form-group form-group-default form-group-default-select2">
                                                 <label>Drinks</label>
                                                 <select name="drinks[]" class=" full-width" data-init-plugin="select2" multiple>
-                                                    <option value="tea">Tea</option>
-                                                    <option value="coffee">Coffee</option>
-                                                    <option value="alcohol">Alcohol</option>
-                                                    <option value="softDrink">Soft Drink</option>
-                                                    <option value="milk">Milk</option>
+                                                    <option value="Tea">Tea</option>
+                                                    <option value="Coffee">Coffee</option>
+                                                    <option value="Alcohol">Alcohol</option>
+                                                    <option value="Soft Drink">Soft Drink</option>
+                                                    <option value="Milk">Milk</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -276,7 +275,7 @@
                                         <div class="col-6">
                                             <div class="form-group">
                                                 <div class="checkbox check-primary">
-                                                    <input type="checkbox" name="is_smocking" value="1" id="smoking">
+                                                    <input type="checkbox" name="is_smoking" value="1" id="smoking">
                                                     <label for="smoking">Smoking</label>
                                                 </div>
                                             </div>
@@ -372,7 +371,7 @@
                                 <div class="col-6">
                                     <div class="form-group form-group-default">
                                         <label>Body Age</label>
-                                        <input type="text" name="body_age" class="form-control">
+                                        <input type="number" name="body_age" class="form-control">
                                     </div>
                                 </div>
                             </div>
@@ -381,13 +380,13 @@
                                 <div class="col-6">
                                     <div class="form-group form-group-default">
                                         <label>BMI</label>
-                                        <input type="text" name="bmi" class="form-control">
+                                        <input type="number" name="bmi" class="form-control">
                                     </div>
                                 </div>
                                 <div class="col-6">
                                     <div class="form-group form-group-default">
                                         <label>BMR</label>
-                                        <input type="text" name="bmr" class="form-control">
+                                        <input type="number" name="bmr" class="form-control">
                                     </div>
                                 </div>
                             </div>
@@ -395,7 +394,7 @@
                                 <div class="col-6">
                                     <div class="form-group form-group-default">
                                         <label>V Fat</label>
-                                        <input type="text" name="vfat" class="form-control">
+                                        <input type="text" name="v_fat" class="form-control">
                                     </div>
                                 </div>
                                 <div class="col-6">

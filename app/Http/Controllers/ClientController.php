@@ -13,6 +13,7 @@ class ClientController extends Controller
 {
     public function form(Request $request)
     {
+
         $id = $request->get('id');
         $user = Auth::user();
         if($id == null)
@@ -66,8 +67,7 @@ class ClientController extends Controller
     {
         $data = collect();
         $data->client = Client::findOrFail($id);
-        $data->client_body_info = ClientBodyInfo::where('client_id',$id);
-        $data->foodInfo = FoodTime::where('client_id',$id);
+        $data->foodInfo = FoodTime::where('client_id',$id)->first();
         return view('pages.client_detail',compact('data'));
     }
 }

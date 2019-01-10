@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\ClientBodyInfo;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Mockery\Exception;
@@ -20,12 +21,14 @@ class ClientBodyInfoController extends Controller
         }
         else {
             $client_body_info = new ClientBodyInfo();
+            $client_body_info->date_taken = Carbon::now();
             $client_body_info->created_by = $user->id;
         }
         $client_body_info->client_id = $client_id;
         $client_body_info->height = $request->get('height');
         $client_body_info->weight = $request->get('weight');
         $client_body_info->fat = $request->get('fat');
+        $client_body_info->body_age = $request->get('body_age');
         $client_body_info->bmi = $request->get('bmi');
         $client_body_info->bmr = $request->get('bmr');
         $client_body_info->v_fat = $request->get('v_fat');
@@ -34,7 +37,7 @@ class ClientBodyInfoController extends Controller
         $client_body_info->body_ske_muscle = $request->get('body_ske_muscle');
         $client_body_info->arm_sub_fat = $request->get('arm_sub_fat');
         $client_body_info->arm_ske_muscle = $request->get('arm_ske_muscle');
-        $client_body_info->trun_sub_fat	 = $request->get('trun_sub_fat	');
+        $client_body_info->trun_sub_fat	 = $request->get('trun_sub_fat');
         $client_body_info->trun_ske_muscle = $request->get('trun_ske_muscle');
         $client_body_info->leg_sub_fat = $request->get('leg_sub_fat');
         $client_body_info->trun_ske_muscle = $request->get('trun_ske_muscle');
@@ -53,6 +56,6 @@ class ClientBodyInfoController extends Controller
     public function show($id)
     {
         $query = ClientBodyInfo::where('client_id',$id)->get();
-
+        return json_encode($query);
     }
 }

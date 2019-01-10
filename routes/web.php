@@ -15,6 +15,7 @@ Route::post('client','ClientController@form')->name('client');
 
 Route::get('list','ClientController@list')->name('client_list');
 Route::get('/client_detail/{id}','ClientController@show')->name('client_detail');
+Route::get('client_body_info/{id}','ClientBodyInfoController@show')->name('client_body_info');
 
 Route::get('/add_client', function () {
     return view('pages.add_client');
