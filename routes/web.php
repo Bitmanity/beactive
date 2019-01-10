@@ -13,6 +13,9 @@
 
 Route::post('client','ClientController@form')->name('client');
 
+Route::get('list','ClientController@list')->name('client_list');
+Route::get('/client_detail/{id}','ClientController@show')->name('client_detail');
+
 Route::get('/add_client', function () {
     return view('pages.add_client');
 })->name('add_client');
@@ -21,9 +24,6 @@ Route::get('/appointments', function () {
     return view('pages.appointments');
 })->name('appointments');
 
-Route::get('/client_detail', function () {
-    return view('pages.client_detail');
-})->name('client_detail');
 
 Route::get('/view_client', function () {
     return view('pages.view_client');

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Client;
+use App\ClientBodyInfo;
+use App\FoodTime;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Mockery\Exception;
@@ -13,7 +15,6 @@ class ClientController extends Controller
     {
         $id = $request->get('id');
         $user = Auth::user();
-        dd($request->drinks);
         if($id == null)
         {
             $client = new Client();
@@ -53,5 +54,20 @@ class ClientController extends Controller
             dd($exception);
         }
         return view('pages.add_client',['message'=>'Data Inserted Successfully']);
+    }
+
+    public function list(Request $request)
+    {
+        $query = Client::all();
+        return json_encode($query);
+    }
+
+    public function show(Request $request,$id)
+    {
+        $data = collect();
+        $data->client = Client::findOrFail($id);
+        $data->client_body_info = ClientBodyInfo::where('client_id',$id);
+        $data->foodInfo = FoodTime::where('client_id',$id);
+        return view('pages.client_detail',compact('data'));
     }
 }

@@ -64,7 +64,7 @@
                                                 </div>
                                                 <div class="form-input-group flex-1">
                                                     <label>Mobile Number</label>
-                                                    <input type="number" name="mobile_no" class="form-control">
+                                                    <input type="number" name="mobile" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
@@ -249,7 +249,7 @@
                                         <div class="col-6">
                                             <div class="form-group form-group-default form-group-default-select2">
                                                 <label>Drinks</label>
-                                                <select name="drinks" class=" full-width" data-init-plugin="select2" multiple>
+                                                <select name="drinks[]" class=" full-width" data-init-plugin="select2" multiple>
                                                     <option value="tea">Tea</option>
                                                     <option value="coffee">Coffee</option>
                                                     <option value="alcohol">Alcohol</option>

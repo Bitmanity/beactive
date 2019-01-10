@@ -50,4 +50,9 @@ class ClientBodyInfoController extends Controller
         }
         return;
     }
+    public function show($id)
+    {
+        $query = ClientBodyInfo::where('client_id',$id)->get();
+
+    }
 }

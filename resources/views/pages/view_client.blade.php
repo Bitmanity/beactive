@@ -47,7 +47,7 @@
                                         <td class="v-align-middle">
                                             <ul class="d-lg-inline-block d-none notification-list no-margin  no-style">
                                                 <li class="p-r-10 inline">
-                                                    <a href="{{route('client_detail')}}" class="header-icon fa fa-eye"></a>
+
                                                 </li>
                                                 <li class="p-r-10 inline">
                                                     <a href="#" class="header-icon fa fa-edit"></a>
@@ -75,7 +75,48 @@
     <script>
         $(document).ready(function() {
             $('#myDatepicker').datepicker();
+            $('#tableWithSearch').DataTable({
+                "sDom": "<'table-responsive't><'row'<p i>>",
+                "sPaginationType": "bootstrap",
+                "destroy": true,
+                "scrollCollapse": true,
+                "oLanguage": {
+                    "sLengthMenu": "_MENU_ ",
+                    "sInfo": "Showing <b>_START_ to _END_</b> of _TOTAL_ entries"
+                },
+                "iDisplayLength": 10,
+                "deferRender": true,
+                ajax: {
+                    url: '{{route('client_list')}}',
+                    dataSrc: ''
+                },
+                columns: [
+                    {data: 'id'},
+                    {data: concat},
+                    {data: 'mobile'},
+                    {data: 'email'},
+                    {
+                        data: 'id',
+                        render: function (data,row,type) {
+                            return "<ul class=\"d-lg-inline-block d-none notification-list no-margin  no-style\">\n" +
+                                "                                                <li class=\"p-r-10 inline\">\n" +
+                                "                                                    <a href=\"{{url('client_detail')}}/"+data+"\" class=\"header-icon fa fa-eye\"></a>\n" +
+                                "                                                </li>\n" +
+                                "                                                <li class=\"p-r-10 inline\">\n" +
+                                "                                                    <a href=\"#\" class=\"header-icon fa fa-edit\"></a>\n" +
+                                "                                                </li>\n" +
+                                "                                                <li class=\"p-r-10 inline\">\n" +
+                                "                                                    <a href=\"#\" class=\"header-icon fa fa-trash-o\"></a>\n" +
+                                "                                                </li>\n" +
+                                "                                            </ul>"
+                        }
+                    }
+                ]
+            });
         });
+        function concat(data,type,dataToSet) {
+            return data.first_name + ' '+data.last_name;
+        }
     </script>
     <!-- <script type="text/javascript">
         $('#timepicker1').timepicker();

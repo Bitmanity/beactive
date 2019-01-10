@@ -33,6 +33,7 @@ class FoodInfoController extends Controller
         $food_time->tired_time = $request->tired_time;
         $food_time->food_type = $request->food_type;
         $food_time->fav_snacks = $request->fav_snacks;
+        $food_time->drinks = implode(',',$request->drinks);
         $food_time->water = $request->water;
         if ($request->is_smocking)
         {
