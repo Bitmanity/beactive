@@ -426,16 +426,9 @@
                                                         <table class="table table-hover">
                                                             <tbody>
                                                             <tr>
-                                                                <td class="fs-14 w-50">Email</td>
-                                                                <td class=" text-left w-50 b-l b-dashed b-grey">
-                                                                    <span class="fs-18">rehmaity@gmail.com</span>
-                                                                </td>
-
-                                                            </tr>
-                                                            <tr>
                                                                 <td class="fs-14 w-50">DOB</td>
                                                                 <td class=" text-left w-50 b-l b-dashed b-grey">
-                                                                    <span class="fs-18">8 October 1995</span>
+                                                                    <span class="fs-18">{{\Carbon\Carbon::createFromFormat('Y-m-d',$data->client->dob)->toFormattedDateString()}}</span>
                                                                 </td>
 
 
@@ -443,7 +436,7 @@
                                                             <tr>
                                                                 <td class="fs-14 w-50">Address</td>
                                                                 <td class=" text-left w-50 b-l b-dashed b-grey">
-                                                                    <span class="fs-18">Dahanu Road, Mumbai, Maharashtra, INDIA, Pincode - 401602</span>
+                                                                    <span class="fs-18">{{$data->client->address}}</span>
                                                                 </td>
                                                             </tr>
                                                             </tbody>
@@ -479,32 +472,36 @@
                                                             <tr>
                                                                 <td class="fs-14 w-50">Work Hours</td>
                                                                 <td class=" text-left w-50 b-l b-dashed b-grey">
-                                                                    <span class="fs-18">10</span>
+                                                                    <span class="fs-18">{{$data->client->working_hours}}</span>
                                                                 </td>
 
                                                             </tr>
                                                             <tr>
                                                                 <td class="fs-14 w-50">Best Time To Call</td>
                                                                 <td class=" text-left w-50 b-l b-dashed b-grey">
-                                                                    <span class="fs-18">Sunday Afternoon</span>
+                                                                    <span class="fs-18">{{$data->client->time_to_call}}</span>
                                                                 </td>
                                                             </tr>
                                                             <tr>
                                                                 <td class="fs-14 w-50">Currently Excercising</td>
                                                                 <td class=" text-left w-50 b-l b-dashed b-grey">
-                                                                    <span class="fs-18">Yes</span>
+                                                                    @if($data->foodInfo->is_exercising)
+                                                                        <span class="fs-18">Yes</span>
+                                                                    @else
+                                                                        <span class="fs-18">No</span>
+                                                                    @endif
                                                                 </td>
                                                             </tr>
                                                             <tr>
                                                                 <td class="fs-14 w-50">Excercising Program</td>
                                                                 <td class=" text-left w-50 b-l b-dashed b-grey">
-                                                                    <span class="fs-18">Gym Cardio Workout</span>
+                                                                    <span class="fs-18">{{$data->client->exercises}}</span>
                                                                 </td>
                                                             </tr>
                                                             <tr>
                                                                 <td class="fs-14 w-50">Body Check Up</td>
                                                                 <td class=" text-left w-50 b-l b-dashed b-grey">
-                                                                    <span class="fs-18">Yes</span>
+                                                                    <span class="fs-18">{{$data->client->body_checkup}}</span>
                                                                 </td>
                                                             </tr>
                                                             </tbody>
@@ -543,19 +540,19 @@
                                                             <tr>
                                                                 <td class="fs-14 w-50">Advance</td>
                                                                 <td class=" text-left w-50 b-l b-dashed b-grey">
-                                                                    <span class="fs-18">123</span>
+                                                                    <span class="fs-18">{{$data->client->advance}}</span>
                                                                 </td>
                                                             </tr>
                                                             <tr>
                                                                 <td class="fs-14 w-50">Balance</td>
                                                                 <td class=" text-left w-50 b-l b-dashed b-grey">
-                                                                    <span class="fs-18">123</span>
+                                                                    <span class="fs-18">{{$data->client->balance}}</span>
                                                                 </td>
                                                             </tr>
                                                             <tr>
                                                                 <td class="fs-14 w-50 bold">Total</td>
                                                                 <td class=" text-left w-50 b-l b-dashed b-grey">
-                                                                    <span class="fs-18 bold">675</span>
+                                                                    <span class="fs-18 bold">{{$data->client->total}}</span>
                                                                 </td>
                                                             </tr>
                                                             </tbody>
