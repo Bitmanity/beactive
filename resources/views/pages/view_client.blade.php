@@ -47,7 +47,7 @@
                                         <td class="v-align-middle">
                                             <ul class="d-lg-inline-block d-none notification-list no-margin  no-style">
                                                 <li class="p-r-10 inline">
-                                                    <a href="client_detail.html" class="header-icon fa fa-eye"></a>
+                                                    <a href="{{route('client_detail')}}" class="header-icon fa fa-eye"></a>
                                                 </li>
                                                 <li class="p-r-10 inline">
                                                     <a href="#" class="header-icon fa fa-edit"></a>

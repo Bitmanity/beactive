@@ -20,8 +20,8 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+      <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
               <caret line="17" column="3" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
@@ -83,6 +83,41 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="add_client.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/pages/add_client.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="511">
+              <caret line="1063" column="58" lean-forward="false" selection-start-line="1063" selection-start-column="58" selection-end-line="1063" selection-end-column="58" />
+              <folding>
+                <element signature="e#1610#57526#0#HTML" expanded="false" />
+                <element signature="e#1912#31871#0#HTML" expanded="false" />
+                <element signature="e#4646#4651#0#HTML" expanded="true" />
+                <element signature="e#23967#23972#0#HTML" expanded="true" />
+                <element signature="e#27428#27433#0#HTML" expanded="true" />
+                <element signature="e#28054#28059#0#HTML" expanded="true" />
+                <element signature="e#29950#29955#0#HTML" expanded="true" />
+                <element signature="e#57539#71796#0#HTML" expanded="false" />
+                <element signature="e#71809#79953#0#HTML" expanded="false" />
+                <element signature="e#79966#85483#0#HTML" expanded="false" />
+                <element signature="e#85894#87144#0#HTML" expanded="false" />
+                <element signature="e#87157#87756#0#HTML" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="form_elements.html" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Products/pages_demo/html/casual/form_elements.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="344">
+              <caret line="27" column="4" lean-forward="false" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="110" />
+              <folding>
+                <element signature="n#div#0;n#div#1;n#div#0;n#div#10;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
@@ -96,20 +131,22 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/includes/stylesheet.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/includes/footer.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/includes/script.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/default.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/index.blade.php" />
         <option value="$USER_HOME$/Desktop/beactive 2/appointments.html" />
         <option value="$PROJECT_DIR$/resources/views/pages/client_detail.blade.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
-        <option value="$PROJECT_DIR$/resources/views/pages/view_client.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/includes/header.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ClientController.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/appointments.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/add_client.blade.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/resources/views/includes/script.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/includes/stylesheet.blade.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/view_client.blade.php" />
+        <option value="$USER_HOME$/Products/pages_demo/html/casual/form_elements.html" />
+        <option value="$PROJECT_DIR$/resources/views/pages/add_client.blade.php" />
       </list>
     </option>
   </component>
@@ -565,7 +602,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/index.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/includes/stylesheet.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1802">
           <caret line="106" column="39" selection-start-line="106" selection-start-column="39" selection-end-line="106" selection-end-column="39" />
@@ -586,10 +623,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="3" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Products/pages_demo/html/casual/form_elements.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="27" column="4" lean-forward="false" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="110" />
+          <folding>
+            <element signature="n#div#0;n#div#1;n#div#0;n#div#10;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/add_client.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="511">
+          <caret line="1063" column="58" lean-forward="false" selection-start-line="1063" selection-start-column="58" selection-end-line="1063" selection-end-column="58" />
+          <folding>
+            <element signature="e#1610#57526#0#HTML" expanded="false" />
+            <element signature="e#1912#31871#0#HTML" expanded="false" />
+            <element signature="e#4646#4651#0#HTML" expanded="true" />
+            <element signature="e#23967#23972#0#HTML" expanded="true" />
+            <element signature="e#27428#27433#0#HTML" expanded="true" />
+            <element signature="e#28054#28059#0#HTML" expanded="true" />
+            <element signature="e#29950#29955#0#HTML" expanded="true" />
+            <element signature="e#57539#71796#0#HTML" expanded="false" />
+            <element signature="e#71809#79953#0#HTML" expanded="false" />
+            <element signature="e#79966#85483#0#HTML" expanded="false" />
+            <element signature="e#85894#87144#0#HTML" expanded="false" />
+            <element signature="e#87157#87756#0#HTML" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
