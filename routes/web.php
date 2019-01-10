@@ -23,9 +23,9 @@ Route::get('/appointments', function () {
     return view('pages.appointments');
 })->name('appointments');
 
-Route::get('/client_detail', function () {
-    return view('pages.client_detail');
-})->name('client_detail');
+Route::get('/client_details', function () {
+    return view('pages.client_details');
+})->name('client_details');
 
 Route::get('/view_client', function () {
     return view('pages.view_client');

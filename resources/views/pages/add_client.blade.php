@@ -2,12 +2,7 @@
 
 @section('title', 'Add Client')
 
-@section('stylesheet')
-    <link href="{{asset('assets/plugins/summernote/css/summernote.css')}}" rel="stylesheet" type="text/css" media="screen">
-@endsection
-
 @section('content')
-    <form action="">
     <div id="rootwizard" class="m-t-10">
         <!-- Nav tabs -->
         <ul class="nav nav-tabs nav-tabs-linetriangle nav-tabs-separator nav-stack-sm" role="tablist"
@@ -25,21 +20,17 @@
                             class="fa fa-info tab-icon"></i> <span>Body Info</span></a>
             </li>
             <li class="nav-item">
-                <a class="" data-toggle="tab" href="#tab4" data-target="#tab4" role="tab"><i class="fa fa-clock-o tab-icon"></i> <span>Other Details</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="" data-toggle="tab" href="#tab5" data-target="#tab5" role="tab"><i class="fa fa-clock-o tab-icon"></i> <span>Diet Plan</span></a>
+                <a class="" data-toggle="tab" href="#tab4" data-target="#tab4" role="tab"><i
+                            class="fa fa-clock-o tab-icon"></i> <span>Finish</span></a>
             </li>
         </ul>
         <!-- Tab panes -->
-
-        <div class="tab-content">
-
-            <div class="tab-pane padding-20 sm-no-padding active slide-left" id="tab1">
-                <div class="row row-same-height">
-                    <div class="col-md-6 b-r b-dashed b-grey sm-b-b">
-                        <div class="padding-30 sm-padding-5 sm-m-t-15 ">
-
+        <form>
+            <div class="tab-content">
+                <div class="tab-pane padding-20 sm-no-padding active slide-left" id="tab1">
+                    <div class="row row-same-height">
+                        <div class="col-md-6 b-r b-dashed b-grey sm-b-b">
+                            <div class="padding-30 sm-padding-5 sm-m-t-15 ">
                                 <div class="">
                                     <div class="row clearfix">
                                         <div class="col-sm-6">
@@ -464,16 +455,10 @@
                                         </div>
                                     </div>
                                 </div>
-
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="padding-30 sm-padding-5">
-
-
-
-
-
+                        <div class="col-md-6">
+                            <div class="padding-30 sm-padding-5">
                                 <div class="">
                                     <div class="form-group form-group-default ">
                                         <label>Address</label>
@@ -764,15 +749,15 @@
                                     </div>
 
                                 </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="tab-pane slide-left padding-20 sm-no-padding" id="tab2">
                     <div class="row row-same-height">
 
-                    <div class="col-md-6 b-r b-dashed b-grey sm-b-b">
-                        <div class="padding-30 sm-padding-5">
-
+                        <div class="col-md-6 b-r b-dashed b-grey sm-b-b">
+                            <div class="padding-30 sm-padding-5">
                                 <div class="">
                                     <p>Details on Time</p>
                                     <div class="row">
@@ -856,14 +841,10 @@
                                     </div>
                                 </div>
                                 <br>
-
-
-
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-6 ">
-                        <div class="padding-30 sm-padding-5">
-
+                        <div class="col-md-6 ">
+                            <div class="padding-30 sm-padding-5">
                                 <p>Details on Food</p>
                                 <div class="">
                                     <div class="row clearfix">
@@ -982,9 +963,7 @@
                                     </div>
                                 </div>
                                 <br>
-
-
-
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1059,12 +1038,10 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="padding-30 sm-padding-5">
-
-                                <div class="">
-                                    <p>Details on Fat in Body</p>
+                        <div class="col-6">
+                            <div class="padding-30 sm-padding-5">
+                                    <div class="">
+                                        <p>Details on Fat in Body</p>
 
                                         <div class="row">
                                             <div class="col-6">
@@ -1126,10 +1103,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-
-
-
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1144,16 +1118,15 @@
                                 <!-- <p class="small hint-text">Below is a sample page for your cart , Created using pages design UI Elementes</p> -->
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-7">
-                        <div class="padding-30 sm-padding-5">
-
-                                <div class="">
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <div class="form-group form-group-default">
-                                                <label>Work Hours</label>
-                                                <input type="text" class="form-control">
+                        <div class="col-md-7">
+                            <div class="padding-30 sm-padding-5">
+                                    <div class="">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="form-group form-group-default">
+                                                    <label>Work Hours</label>
+                                                    <input type="text" class="form-control">
+                                                </div>
                                             </div>
                                             <div class="col-6">
                                                 <div class="form-group form-group-default">
@@ -1217,78 +1190,53 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-
-
-
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="tab-pane slide-left padding-20 sm-no-padding" id="tab5">
-                <div class="row row-same-height">
-                    <div class="col-lg-12">
-                        <div class="summernote-wrapper">
-                            <div id="summernote">Diet Plan</div>
-                        </div>
-                    </div>
+                <div class="padding-20 sm-padding-5 sm-m-b-20 sm-m-t-20 bg-white clearfix">
+                    <ul class="pager wizard no-style">
+                        <li class="next">
+                            <button class="btn btn-primary btn-cons btn-animated from-left fa fa-truck pull-right"
+                                    type="button">
+                                <span>Next</span>
+                            </button>
+                        </li>
+                        <li class="next finish hidden">
+                            <button class="btn btn-primary btn-cons btn-animated from-left fa fa-cog pull-right"
+                                    type="button">
+                                <span>Finish</span>
+                            </button>
+                        </li>
+                        <li class="previous first hidden">
+                            <button class="btn btn-default btn-cons btn-animated from-left fa fa-cog pull-right"
+                                    type="button">
+                                <span>First</span>
+                            </button>
+                        </li>
+                        <li class="previous">
+                            <button class="btn btn-default btn-cons pull-right" type="button">
+                                <span>Previous</span>
+                            </button>
+                        </li>
+                    </ul>
                 </div>
-            </div>
-
-            <div class="padding-20 sm-padding-5 sm-m-b-20 sm-m-t-20 bg-white clearfix">
-                <ul class="pager wizard no-style">
-                    <li class="next">
-                        <button class="btn btn-primary btn-cons btn-animated from-left fa fa-truck pull-right" type="button">
-                            <span>Next</span>
-                        </button>
-                    </li>
-                    <li class="next finish hidden">
-                        <button class="btn btn-primary btn-cons btn-animated from-left fa fa-cog pull-right" type="button">
-                            <span>Finish</span>
-                        </button>
-                    </li>
-                    <li class="previous first hidden">
-                        <button class="btn btn-default btn-cons btn-animated from-left fa fa-cog pull-right" type="button">
-                            <span>First</span>
-                        </button>
-                    </li>
-                    <li class="previous">
-                        <button class="btn btn-default btn-cons pull-right" type="button">
-                            <span>Previous</span>
-                        </button>
-                    </li>
-                </ul>
-            </div>
-            <div class="wizard-footer padding-20 bg-master-light">
-                <!-- <p class="small hint-text pull-left no-margin">
-                    The Top Content Is Soley Created using pages UI Elements such as Invoice, Tabs, Form Layouts etc. and are prior for representation Purpose Only.
-                </p> -->
-                <div class="pull-right">
-                    <img src="assets/img/logo.png" alt="logo" data-src="assets/img/logo.png" data-src-retina="assets/img/logo_2x.png" width="78" height="22">
+                <div class="wizard-footer padding-20 bg-master-light">
+                    <!-- <p class="small hint-text pull-left no-margin">
+                        The Top Content Is Soley Created using pages UI Elements such as Invoice, Tabs, Form Layouts etc. and are prior for representation Purpose Only.
+                    </p> -->
+                    <div class="pull-right">
+                        <img src="assets/img/logo.png" alt="logo" data-src="assets/img/logo.png"
+                             data-src-retina="assets/img/logo_2x.png" width="78" height="22">
+                    </div>
+                    <div class="clearfix"></div>
                 </div>
             </div>
         </form>
     </div>
-    </form>
 @endsection
 
 @section('script')
-    <script src="assets/plugins/summernote/js/summernote.min.js" type="text/javascript"></script>
-    <script>
-        $('#summernote').summernote({
-            height: 300,
-            toolbar: [
-                // [groupName, [list of button]]
-                ['style', ['bold', 'italic', 'underline', 'clear']],
-                ['font', ['strikethrough', 'superscript', 'subscript']],
-                ['fontsize', ['fontsize']],
-                ['color', ['color']],
-                ['para', ['ul', 'ol', 'paragraph']],
-                ['height', ['height']]
-            ]
-        });
-    </script>
-
     <script>
         $(document).ready(function () {
             $('#myDatepicker').datepicker();
