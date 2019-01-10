@@ -33,7 +33,7 @@
                                     </thead>
                                     <tbody>
                                     <tr>
-                                        <td class="semi-bold class=" v-align-middle "">
+                                        <td class="semi-bold v-align-middle" >
                                         <p>01-2018</p>
                                         </td>
                                         <td class="v-align-middle">
