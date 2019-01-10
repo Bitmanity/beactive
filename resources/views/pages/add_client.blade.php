@@ -117,7 +117,7 @@
                                         <div class="col-4">
                                             <div class="form-group form-group-default">
                                                 <label>Pin code</label>
-                                                <input type="text"  name="pincode" class="form-control">
+                                                <input type="text"  name="zipcode" class="form-control">
                                             </div>
                                         </div>
                                     </div>
@@ -131,7 +131,6 @@
 
                     <div class="col-md-6 b-r b-dashed b-grey sm-b-b">
                         <div class="padding-30 sm-padding-5">
-                            
                                 <div class="">
                                     <p>Details on Time</p>
                                     <div class="row">
@@ -202,13 +201,13 @@
                                         <div class="col-4">
                                             <div class="form-group form-group-default input-group bootstrap-timepicker">
                                                 <label>Most Hungry Time</label>
-                                                <input id="timepicker5" name="most_hungry_time" type="text" class="form-control">
+                                                <input id="timepicker5" name="hungry_time" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-4">
                                             <div class="form-group form-group-default input-group bootstrap-timepicker">
                                                 <label>Most Tired Time</label>
-                                                <input id="timepicker6" name="most_tired_time" type="text" class="form-control">
+                                                <input id="timepicker6" name="tired_time" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-4"></div>
@@ -229,7 +228,7 @@
                                         <div class="col-6">
                                             <div class="form-group form-group-default form-group-default-select2 ">
                                                 <label class="">Favourite Food</label>
-                                                <select name="favourite_food" class="full-width" data-placeholder="Select Country" data-init-plugin="select2">
+                                                <select name="food_type" class="full-width" data-placeholder="Select Country" data-init-plugin="select2">
                                                     <!-- <optgroup label="Alaskan/Hawaiian Time Zone"> -->
                                                     <option value="low">Only Veg </option>
                                                     <option value="medium">Only Non-Veg</option>
@@ -241,7 +240,7 @@
                                         <div class="col-sm-6">
                                             <div class="form-group form-group-default">
                                                 <label>Favourite Snacks</label>
-                                                <input type="text" name="favourite_snacks" class="form-control">
+                                                <input type="text" name="fav_snacks" class="form-control">
                                             </div>
                                         </div>
                                     </div>
@@ -263,7 +262,7 @@
                                             <div class="form-group form-group-default input-group">
                                                 <div class="form-input-group">
                                                     <label>Water Intake</label>
-                                                    <input type="number" name="water_intake" class="form-control">
+                                                    <input type="number" name="water" class="form-control">
                                                 </div>
                                                 <div class="input-group-append ">
                                                                     <span class="input-group-text">Liter
@@ -277,7 +276,7 @@
                                         <div class="col-6">
                                             <div class="form-group">
                                                 <div class="checkbox check-primary">
-                                                    <input type="checkbox" name="smoking" value="1" id="smoking">
+                                                    <input type="checkbox" name="is_smocking" value="1" id="smoking">
                                                     <label for="smoking">Smoking</label>
                                                 </div>
                                             </div>
@@ -285,7 +284,7 @@
                                         <div class="col-sm-6">
                                             <div class="form-group">
                                                 <div class="checkbox check-primary">
-                                                    <input name="appetite" type="checkbox" value="1" id="appetite">
+                                                    <input name="is_appetite" type="checkbox" value="1" id="appetite">
                                                     <label for="appetite">Appetite</label>
                                                 </div>
                                             </div>
@@ -295,7 +294,7 @@
                                         <div class="col-sm-6">
                                             <div class="form-group">
                                                 <div class="checkbox check-primary">
-                                                    <input name="digestion" type="checkbox" value="1" id="digestion">
+                                                    <input name="is_digestion" type="checkbox" value="1" id="digestion">
                                                     <label for="digestion">Digestion</label>
                                                 </div>
                                             </div>
@@ -303,7 +302,7 @@
                                         <div class="col-sm-6">
                                             <div class="form-group">
                                                 <div class="checkbox check-primary">
-                                                    <input name="acidity" type="checkbox" value="1" id="acidity">
+                                                    <input name="is_acidity" type="checkbox" value="1" id="acidity">
                                                     <label for="acidity">Acidity</label>
                                                 </div>
                                             </div>
@@ -313,7 +312,7 @@
                                         <div class="col-sm-6">
                                             <div class="form-group">
                                                 <div class="checkbox check-primary">
-                                                    <input name="medication" type="checkbox" value="1" id="medication">
+                                                    <input name="is_medication" type="checkbox" value="1" id="medication">
                                                     <label for="medication">Medication</label>
                                                 </div>
                                             </div>
@@ -321,7 +320,7 @@
                                         <div class="col-sm-6">
                                             <div class="form-group">
                                                 <div class="checkbox check-primary">
-                                                    <input name="high_bp" type="checkbox" value="1" id="highBP">
+                                                    <input name="is_high_bp" type="checkbox" value="1" id="highBP">
                                                     <label for="highBP">High BP</label>
                                                 </div>
                                             </div>
@@ -332,7 +331,7 @@
                                         <div class="col-sm-6">
                                             <div class="form-group">
                                                 <div class="checkbox check-primary">
-                                                    <input name="low_bp" type="checkbox" value="1" id="LowBP">
+                                                    <input name="is_low_bp" type="checkbox" value="1" id="LowBP">
                                                     <label for="LowBP">Low BP</label>
                                                 </div>
                                             </div>
@@ -402,7 +401,7 @@
                                 <div class="col-6">
                                     <div class="form-group form-group-default form-group-default-select2">
                                         <label class="">Energy Level</label>
-                                        <select name="energy_level" class="full-width" data-placeholder="Select Country" data-init-plugin="select2">
+                                        <select name="energy" class="full-width" data-placeholder="Select Country" data-init-plugin="select2">
                                             <!-- <optgroup label="Alaskan/Hawaiian Time Zone"> -->
                                             <option value="low">Low </option>
                                             <option value="medium">Medium</option>
@@ -424,13 +423,13 @@
                                         <div class="col-6">
                                             <div class="form-group form-group-default">
                                                 <label>Whole Body Sub Fat</label>
-                                                <input name="whole_body_sub_fat" type="text" class="form-control">
+                                                <input name="body_sub_fat" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-6">
                                             <div class="form-group form-group-default">
                                                 <label>Whole Body Ske Muscle</label>
-                                                <input name="whole_body_ske_muscle" type="text" class="form-control">
+                                                <input name="body_ske_muscle" type="text" class="form-control">
                                             </div>
                                         </div>
 
@@ -493,13 +492,13 @@
                                     <div class="col-6">
                                         <div class="form-group form-group-default">
                                             <label>Work Hours</label>
-                                            <input type="text" class="form-control">
+                                            <input name="working_hours" type="text" class="form-control">
                                         </div>
                                     </div>
                                     <div class="col-6">
                                         <div class="form-group form-group-default">
                                             <label>Best Time of Call</label>
-                                            <input type="text" class="form-control">
+                                            <input type="text" name="time_to_call" class="form-control">
                                         </div>
                                     </div>
                                 </div>
@@ -507,7 +506,7 @@
                                     <div class="col-6">
                                         <div class="form-group">
                                             <div class="checkbox check-primary">
-                                                <input type="checkbox" value="1" id="currentlyExercising">
+                                                <input name="is_exercising" type="checkbox" value="1" id="currentlyExercising">
                                                 <label for="currentlyExercising">Currently Exercising</label>
                                             </div>
                                         </div>
@@ -515,7 +514,7 @@
                                     <div class="col-6">
                                         <div class="form-group form-group-default">
                                             <label>What Exercise Program?</label>
-                                            <input type="text" class="form-control">
+                                            <input name="exercises" type="text" class="form-control">
                                         </div>
                                     </div>
                                 </div>
@@ -523,13 +522,13 @@
                                     <div class="col-6">
                                         <div class="form-group form-group-default">
                                             <label>Body Check Up</label>
-                                            <input type="text" class="form-control">
+                                            <input name="body_checkup" type="text" class="form-control">
                                         </div>
                                     </div>
                                     <div class="col-6">
                                         <div class="form-group form-group-default">
                                             <label>Advance</label>
-                                            <input type="text" class="form-control">
+                                            <input name="advance" type="text" class="form-control">
                                         </div>
                                     </div>
 
@@ -538,13 +537,13 @@
                                     <div class="col-6">
                                         <div class="form-group form-group-default">
                                             <label>Balance</label>
-                                            <input type="text" class="form-control">
+                                            <input name="balance" type="text" class="form-control">
                                         </div>
                                     </div>
                                     <div class="col-6">
                                         <div class="form-group form-group-default">
                                             <label>Total</label>
-                                            <input type="text" class="form-control">
+                                            <input name="total" type="text" class="form-control">
                                         </div>
                                     </div>
 
@@ -554,7 +553,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="padding-30 sm-padding-5">
-                            <textarea id="summernote" name="diet_plan">Diet Plan</textarea>
+                            <textarea id="summernote" name="diet_schedule">Diet Plan</textarea>
                         </div>
                     </div>
                 </div>

@@ -12,9 +12,6 @@
 */
 
 Route::post('client','ClientController@form')->name('client');
-Route::get('/', function () {
-    return view('pages.index');
-})->name('index');
 
 Route::get('/add_client', function () {
     return view('pages.add_client');
@@ -32,3 +29,7 @@ Route::get('/view_client', function () {
     return view('pages.view_client');
 })->name('view_client');
 
+
+Auth::routes();
+
+Route::get('/', 'HomeController@index')->name('index');
