@@ -1,7 +1,10 @@
 @extends('layouts.default')
 
 @section('title', 'Add Client')
+@section('stylesheet')
+    <link media="screen" type="text/css" rel="stylesheet" href="{{asset('assets/plugins/summernote/css/summernote.css')}}">
 
+@endsection
 @section('content')
     <div id="rootwizard" class="m-t-10">
         <!-- Nav tabs -->
@@ -959,90 +962,75 @@
             </div>
             <div class="tab-pane slide-left padding-20 sm-no-padding" id="tab4">
                 <div class="row row-same-height">
-                    <div class="col-md-5 b-r b-dashed b-grey ">
+                    <div class="col-md-6 b-r b-dashed b-grey ">
                         <div class="padding-30 sm-padding-5 sm-m-t-15 m-t-50">
-                            <h2>Your Information is safe with us!</h2>
-                            <p>We respect your privacy and protect it with strong encryption, plus strict policies.</p>
-                            <!-- <p>Discover goods you'll love from brands that inspire. The easiest way to open your own online store. Discover amazing stuff or open your own store for free!</p> -->
-                            <!-- <p class="small hint-text">Below is a sample page for your cart , Created using pages design UI Elementes</p> -->
-                        </div>
-                    </div>
-                    <div class="col-md-7">
-                        <div class="padding-30 sm-padding-5">
-                            <form role="form">
-                                <div class="">
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <div class="form-group form-group-default">
-                                                <label>Work Hours</label>
-                                                <input type="text" class="form-control">
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <div class="form-group form-group-default">
-                                                <label>Best Time of Call</label>
-                                                <input type="text" class="form-control">
-                                            </div>
+                            <div class="">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-group form-group-default">
+                                            <label>Work Hours</label>
+                                            <input type="text" class="form-control">
                                         </div>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <div class="form-group">
-                                                <div class="checkbox check-primary">
-                                                    <input type="checkbox" value="1" id="currentlyExercising">
-                                                    <label for="currentlyExercising">Currently Exercising</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <div class="form-group form-group-default">
-                                                <label>What Exercise Program?</label>
-                                                <input type="text" class="form-control">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <div class="form-group form-group-default">
-                                                <label>Body Check Up</label>
-                                                <input type="text" class="form-control">
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <div class="form-group form-group-default">
-                                                <label>Advance</label>
-                                                <input type="text" class="form-control">
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <div class="form-group form-group-default">
-                                                <label>Balance</label>
-                                                <input type="text" class="form-control">
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <div class="form-group form-group-default">
-                                                <label>Total</label>
-                                                <input type="text" class="form-control">
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <div class="form-group form-group-default">
-                                                <label>Diet Schedule</label>
-                                                <input type="text" class="form-control">
-                                            </div>
+                                    <div class="col-6">
+                                        <div class="form-group form-group-default">
+                                            <label>Best Time of Call</label>
+                                            <input type="text" class="form-control">
                                         </div>
                                     </div>
                                 </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <div class="checkbox check-primary">
+                                                <input type="checkbox" value="1" id="currentlyExercising">
+                                                <label for="currentlyExercising">Currently Exercising</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group form-group-default">
+                                            <label>What Exercise Program?</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-group form-group-default">
+                                            <label>Body Check Up</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group form-group-default">
+                                            <label>Advance</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
 
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-group form-group-default">
+                                            <label>Balance</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group form-group-default">
+                                            <label>Total</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
 
-                            </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="padding-30 sm-padding-5">
+                            <div id="summernote">Diet Plan</div>
                         </div>
                     </div>
                 </div>
@@ -1085,9 +1073,21 @@
 @endsection
 
 @section('script')
+    <script type="text/javascript" src="assets/plugins/summernote/js/summernote.min.js"></script>
+
     <script>
         $(document).ready(function() {
             $('#myDatepicker').datepicker();
+        });
+        $('#summernote').summernote({
+            toolbar: [
+                // [groupName, [list of button]]
+                ['style', ['bold', 'italic', 'underline', 'clear']],
+                ['fontsize', ['fontsize']],
+                ['para', ['ul', 'ol', 'paragraph']],
+
+            ],
+            height:250,
         });
     </script>
     <!-- <script type="text/javascript">
@@ -1151,4 +1151,5 @@
             widget.find('.glyphicon-chevron-down').removeClass().addClass('pg-arrow_minimize');
         });
     </script>
+
 @endsection

@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e925b7f4-f2ea-4d25-b19e-a3cffa79cf65" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/add_client.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/add_client.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,11 +13,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+            <state relative-caret-position="153">
+              <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -59,11 +58,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="add_client.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="add_client.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/pages/add_client.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+            <state relative-caret-position="320">
+              <caret line="1089" column="22" selection-start-line="1089" selection-start-column="22" selection-end-line="1089" selection-end-column="22" />
+              <folding>
+                <element signature="e#4292#4297#0#HTML" expanded="true" />
+                <element signature="e#23613#23618#0#HTML" expanded="true" />
+                <element signature="e#27074#27079#0#HTML" expanded="true" />
+                <element signature="e#27700#27705#0#HTML" expanded="true" />
+                <element signature="e#29596#29601#0#HTML" expanded="true" />
+                <element signature="e#80110#80828#0#HTML" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -81,7 +88,6 @@
         <option value="$PROJECT_DIR$/resources/views/includes/script.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/default.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/pages/add_client.blade.php" />
         <option value="$USER_HOME$/Desktop/beactive 2/appointments.html" />
         <option value="$PROJECT_DIR$/resources/views/pages/appointments.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/client_detail.blade.php" />
@@ -89,6 +95,7 @@
         <option value="$PROJECT_DIR$/resources/views/pages/view_client.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/includes/header.blade.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/resources/views/pages/add_client.blade.php" />
       </list>
     </option>
   </component>
@@ -313,7 +320,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5491000" />
+    <option name="totallyTimeSpent" value="6963000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -528,6 +535,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+          <folding>
+            <element signature="e#4292#4297#0#HTML" expanded="true" />
+            <element signature="e#23613#23618#0#HTML" expanded="true" />
+            <element signature="e#27074#27079#0#HTML" expanded="true" />
+            <element signature="e#27700#27705#0#HTML" expanded="true" />
+            <element signature="e#29596#29601#0#HTML" expanded="true" />
+            <element signature="e#80110#80828#0#HTML" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -585,13 +600,6 @@
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/Desktop/beactive 2/view_clients.html" />
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/add_client.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pages/appointments.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -636,8 +644,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+        <state relative-caret-position="153">
+          <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/add_client.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="1089" column="22" selection-start-line="1089" selection-start-column="22" selection-end-line="1089" selection-end-column="22" />
+          <folding>
+            <element signature="e#4292#4297#0#HTML" expanded="true" />
+            <element signature="e#23613#23618#0#HTML" expanded="true" />
+            <element signature="e#27074#27079#0#HTML" expanded="true" />
+            <element signature="e#27700#27705#0#HTML" expanded="true" />
+            <element signature="e#29596#29601#0#HTML" expanded="true" />
+            <element signature="e#80110#80828#0#HTML" />
+          </folding>
         </state>
       </provider>
     </entry>
