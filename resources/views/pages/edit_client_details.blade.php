@@ -18,9 +18,6 @@
                     <a class="" data-toggle="tab" href="#tab2" data-target="#tab2" role="tab"><i class="fa fa-cutlery tab-icon"></i> <span>Food & Time</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="" data-toggle="tab" href="#tab3" data-target="#tab3" role="tab"><i class="fa fa-info tab-icon"></i> <span>Body Info</span></a>
-                </li>
-                <li class="nav-item">
                     <a class="" data-toggle="tab" href="#tab4" data-target="#tab4" role="tab"><i class="fa fa-clock-o tab-icon"></i> <span>Finish</span></a>
                 </li>
             </ul>
@@ -29,7 +26,7 @@
                 <div class="tab-pane padding-20 sm-no-padding active slide-left" id="tab1">
                     <div class="row">
                         <div class="col-3">
-                            <div class="m-l-30">a
+                            <div class="m-l-30">
                                 <div class="form-group form-group-default  form-group-default-selectFx">
                                     <label>Type</label>
                                     <select value="{{$data->client->client_type}}" name="client_type" class="cs-select cs-skin-slide cs-transparent form-control" data-init-plugin="cs-select">
@@ -70,11 +67,7 @@
                                     <div class="row">
                                         <div class="col-8">
                                             <div class="form-group form-group-default input-group">
-                                                <div class="cs-input-group-addon input-group-addon d-flex">
-                                                    <select  class="cs-select cs-skin-slide cs-transparent" data-init-plugin="cs-select">
-                                                        <option data-countryCode="IN" value="91" Selected>India (+91)</option>
-                                                    </select>
-                                                </div>
+
                                                 <div class="form-input-group flex-1">
                                                     <label>Mobile Number</label>
                                                     <input value="{{$data->client->mobile}}" type="number" name="mobile" class="form-control">
@@ -106,27 +99,20 @@
                                     </div>
                                     <div class="row clearfix">
                                         <div class="col-sm-6">
-                                            <div class="form-group form-group-default  form-group-default-selectFx">
-                                                <label>Country</label>
-                                                <select  class="cs-select cs-skin-slide cs-transparent form-control" data-init-plugin="cs-select">
-                                                    <option data-countryCode="IN" value="91" Selected>India (+91)</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
                                             <div class="form-group form-group-default">
                                                 <label>City</label>
                                                 <input value="{{$data->client->city}}" type="text" name="city" class="form-control">
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="row clearfix">
-                                        <div class="col-8">
+                                        <div class="col-6">
                                             <div class="form-group form-group-default ">
                                                 <label>State/Province</label>
                                                 <input value="{{$data->client->state}}" type="text"  name="state" class="form-control">
                                             </div>
                                         </div>
+                                    </div>
+                                    <div class="row clearfix">
+
                                         <div class="col-4">
                                             <div class="form-group form-group-default">
                                                 <label>Pin code</label>
@@ -355,150 +341,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane slide-left padding-20 sm-no-padding" id="tab3">
-                    <div class="row row-same-height">
-                        <div class="col-md-6 b-r b-dashed b-grey ">
-                            <div class="padding-30 sm-padding-5 ">
-                                <p>Info Related to Body</p>
-                                <div class="row clearfix">
-                                    <div class="col-6">
-                                        <div class="form-group form-group-default">
-                                            <label>Height</label>
-                                            <input value="{{$data->client->height}}" type="text" name="height" class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="form-group form-group-default">
-                                            <label>Weight</label>
-                                            <input value="{{$data->client->weight}}" type="text" name="weight" class="form-control">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-6">
-                                        <div class="form-group form-group-default">
-                                            <label>Fat</label>
-                                            <input value="{{$data->client->fat}}" type="text" name="fat" class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="form-group form-group-default">
-                                            <label>Body Age</label>
-                                            <input value="{{$data->client->body_age}}" type="number" name="body_age" class="form-control">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-
-                                    <div class="col-6">
-                                        <div class="form-group form-group-default">
-                                            <label>BMI</label>
-                                            <input value="{{$data->client->bmi}}" type="number" name="bmi" class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="form-group form-group-default">
-                                            <label>BMR</label>
-                                            <input value="{{$data->client->bmr}}" type="number" name="bmr" class="form-control">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-6">
-                                        <div class="form-group form-group-default">
-                                            <label>V Fat</label>
-                                            <input value="{{$data->client->v_fat}}" type="text" name="v_fat" class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="form-group form-group-default form-group-default-select2">
-                                            <label class="">Energy Level</label>
-                                            <select value="{{$data->client->energy}}" name="energy" class="full-width" data-placeholder="Select Country" data-init-plugin="select2">
-                                                <!-- <optgroup label="Alaskan/Hawaiian Time Zone"> -->
-                                                <option value="low">Low </option>
-                                                <option value="medium">Medium</option>
-                                                <option value="high">High</option>
-                                                <!-- </optgroup> -->
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="padding-30 sm-padding-5">
-                                <div class="">
-                                    <p>Details on Fat in Body</p>
-
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <div class="form-group form-group-default">
-                                                <label>Whole Body Sub Fat</label>
-                                                <input value="{{$data->client->body_sub_fat}}" name="body_sub_fat" type="text" class="form-control">
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <div class="form-group form-group-default">
-                                                <label>Whole Body Ske Muscle</label>
-                                                <input value="{{$data->client->body_ske_muscle}}" name="body_ske_muscle" type="text" class="form-control">
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <div class="form-group form-group-default">
-                                                <label>Arm Sub Fat</label>
-                                                <input value="{{$data->client->arm_sub_fat}}" name="arm_sub_fat" type="text" class="form-control">
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <div class="form-group form-group-default">
-                                                <label>Arm Ske Muscle</label>
-                                                <input value="{{$data->client->arm_ske_muscle}}" name="arm_ske_muscle" type="text" class="form-control">
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <div class="form-group form-group-default">
-                                                <label>Trun Sub Fat</label>
-                                                <input value="{{$data->client->trun_sub_fat}}" name="trun_sub_fat" type="text" class="form-control">
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <div class="form-group form-group-default">
-                                                <label>Trun Ske Muscle</label>
-                                                <input value="{{$data->client->trun_ske_muscle}}" name="trun_ske_muscle" type="text" class="form-control">
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <div class="form-group form-group-default">
-                                                <label>Leg Sub Fat</label>
-                                                <input value="{{$data->client->leg_sub_fat}}" name="leg_sub_fat" type="text" class="form-control">
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <div class="form-group form-group-default">
-                                                <label>Leg Ske Muscle</label>
-                                                <input value="{{$data->client->leg_ske_muscle}}" name="leg_ske_muscle" type="text" class="form-control">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <div class="tab-pane slide-left padding-20 sm-no-padding" id="tab4">
                     <div class="row row-same-height">
                         <div class="col-md-6 b-r b-dashed b-grey ">
-                            <div class="padding-30 sm-padding-5 sm-m-t-15 m-t-50">
+                            <div class="padding-30 sm-padding-5 sm-m-t-15">
                                 <div class="">
                                     <div class="row">
                                         <div class="col-6">
