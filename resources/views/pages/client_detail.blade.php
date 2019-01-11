@@ -5,6 +5,27 @@
 @section('content')
     <div class="card card-transparent">
         <div class="card-body">
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+            @if(Session::get('success'))
+                <div class="alert alert-success" role="alert">
+                    <button class="close" data-dismiss="alert"></button>
+                    <strong>Success: </strong>{{Session::get('success')}}
+                </div>
+            @endif
+            @if(Session::get('error'))
+                <div class="alert alert-danger" role="alert">
+                    <button class="close" data-dismiss="alert"></button>
+                    <strong>Error: </strong>{{Session::get('error')}}
+                </div>
+            @endif
             <div class="row">
                 <!-- Modal -->
                 <div class="modal fade slide-up disable-scroll" id="myModal" tabindex="-1" role="dialog"
@@ -19,13 +40,14 @@
                                     <h5>Fix <span class="semi-bold">Appointment</span></h5>
                                 </div>
                                 <div class="modal-body">
-                                    <form action="">
+                                    <form action="{{route('add_appointment',$data->client->id)}}" method="post">
+                                        {{csrf_field()}}
                                         <div class="row">
                                             <div class="col-6">
                                                 <div class="form-group form-input-group form-group-default ">
                                                     <label>Appointment Date</label>
                                                     <div id="myDatepicker" class="input-group date">
-                                                        <input type="text" class="form-control">
+                                                        <input type="text" name="app_date" class="form-control">
                                                         <span class="input-group-addon"><i class="fa fa-calendar"></i>
                                                                                 </span>
                                                     </div>
@@ -35,13 +57,13 @@
                                             <div class="col-6">
                                                 <div class="form-group form-group-default input-group bootstrap-timepicker">
                                                     <label>Appointment Time</label>
-                                                    <input id="timepicker1" type="text" class="form-control">
+                                                    <input id="timepicker1"  name="app_time" type="text" class="form-control">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-2">
-                                                <button class="btn btn-primary btn-sm">Submit</button>
+                                                <input class="btn btn-primary btn-sm" type="submit" value="Submit">
                                             </div>
                                         </div>
                                     </form>
@@ -533,7 +555,7 @@
                                                     <div class="demo-card-scrollable"
                                                          style="max-height: 300px; min-height: 300px;">
                                                         <div class="container">
-                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aspernatur delectus, dicta dolor dolorum exercitationem impedit maxime, nesciunt numquam, optio possimus quam sed vero. Aliquam culpa cum magni pariatur sunt.
+                                                            {!! $data->client->diet_schedule !!}
                                                         </div>
                                                     </div>
                                                 </div>
@@ -602,12 +624,11 @@
                                                          style="max-height: 360px; min-height: 360px;">
                                                         <table class="table table-hover">
                                                             <tbody>
+                                                            @foreach($data->app as $appointment)
                                                             <tr>
-                                                                <td class="fs-14 w-50">1 January 2019</td>
+                                                                <td class="fs-14 w-50">{{\Carbon\Carbon::createFromFormat('Y-m-d',$appointment->app_date)->toFormattedDateString()}}</td>
                                                             </tr>
-                                                            <tr>
-                                                                <td class="fs-14 w-50">31 December 2018</td>
-                                                            </tr>
+                                                            @endforeach
                                                             </tbody>
                                                         </table>
                                                     </div>
@@ -665,6 +686,11 @@
                     {data: 'leg_ske_muscle'},
                 ]
             });
+        });
+    </script>
+    <script>
+        $('.date').datepicker({
+            format: 'dd/mm/yyyy'
         });
     </script>
     <!-- <script type="text/javascript">

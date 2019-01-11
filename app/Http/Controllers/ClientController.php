@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Appointment;
 use App\Client;
 use App\ClientBodyInfo;
 use App\FoodTime;
@@ -68,6 +69,13 @@ class ClientController extends Controller
         $data = collect();
         $data->client = Client::findOrFail($id);
         $data->foodInfo = FoodTime::where('client_id',$id)->first();
+        $data->app = Appointment::where('client_id',$id)->get();
         return view('pages.client_detail',compact('data'));
+    }
+
+    public function update_health($id)
+    {
+        $client = Client::findOrFail($id);
+        return view('pages.health_update',compact('client'));
     }
 }

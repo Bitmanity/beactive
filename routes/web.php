@@ -17,6 +17,12 @@ Route::get('list','ClientController@list')->name('client_list');
 Route::get('/client_detail/{id}','ClientController@show')->name('client_detail');
 Route::get('client_body_info/{id}','ClientBodyInfoController@show')->name('client_body_info');
 
+Route::get('/update_health/{id}','ClientController@update_health')->name('update_health');
+
+Route::post('/update_health/{id}','ClientBodyInfoController@form')->name('add_body_info');
+
+Route::post('add_appointment/{id}','AppointmentController@form')->name('add_appointment');
+
 Route::get('/add_client', function () {
     return view('pages.add_client');
 })->name('add_client');

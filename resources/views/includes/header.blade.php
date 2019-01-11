@@ -27,20 +27,17 @@
             <div class="menu-bar header-sm-height" data-hide-extra-li="4" data-pages-init='horizontal-menu'>
                 <a class="btn-link toggle-sidebar d-lg-none pg pg-close" data-toggle="horizontal-menu" href="#"></a>
                 <ul>
-                    <li class="active">
-                        <a href="{{route('index')}}">Dashboard</a>
+                    <li class="">
+                        <a href="{{route('index')}}" class="text-black">Dashboard</a>
                     </li>
                     <li>
-                        <a href="{{route('add_client')}}"><span class="title">Add Client</span></a>
+                        <a href="{{route('add_client')}}" class="text-black"><span class="title">Add Client</span></a>
                     </li>
                     <li class="">
-                        <a href="{{route('view_client')}}"><span class="title">View Clients</span></a>
+                        <a href="{{route('view_client')}}" class="text-black"><span class="title">View Clients</span></a>
                     </li>
                     <li class="">
-                        <a href="{{route('appointments')}}"><span class="title">Appointments</span></a>
-                    </li>
-                    <li class="">
-                        <a href="{{route('health_update')}}"><span class="title">Health Update</span></a>
+                        <a href="{{route('appointments')}}" class="text-black"><span class="title">Appointments</span></a>
                     </li>
                 </ul>
                 {{--<a class="search-link d-flex justify-content-between align-items-center d-lg-none" data-toggle="search" href="#">Tap here to search <i class="pg-search float-right"></i></a>--}}

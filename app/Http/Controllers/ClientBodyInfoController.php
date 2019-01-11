@@ -51,7 +51,7 @@ class ClientBodyInfoController extends Controller
         {
 
         }
-        return;
+        return redirect()->route('view_client')->with(['success'=>'Record Added Successfully']);
     }
     public function show($id)
     {
