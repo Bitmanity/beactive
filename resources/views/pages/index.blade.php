@@ -10,7 +10,7 @@
                     <div class="card card-default">
                         <div class="card-body">
                             <h4 class="bold">Total Entries</h4>
-                            <h3>50</h3>
+                            <h3>{{$data->entries_count}}</h3>
                         </div>
                     </div>
                 </div>
@@ -18,7 +18,7 @@
                     <div class="card card-default">
                         <div class="card-body">
                             <h4 class="bold">Total Client</h4>
-                            <h3>41</h3>
+                            <h3></h3>
                         </div>
                     </div>
 
@@ -27,7 +27,7 @@
                     <div class="card card-default">
                         <div class="card-body">
                             <h4 class="bold">Total Appt</h4>
-                            <h3>41 <span class="hint-text h6">this week</span></h3>
+                            <h3>{{$data->week_app_count}} <span class="hint-text h6">this week</span></h3>
                         </div>
                     </div>
 
@@ -36,7 +36,7 @@
                     <div class="card card-default">
                         <div class="card-body">
                             <h4 class="bold">Pending Appt</h4>
-                            <h3>41 <span class="hint-text h6">this week</span></h3>
+                            <h3>{{$data->week_pending_app_count}} <span class="hint-text h6">this week</span></h3>
                         </div>
                     </div>
 
@@ -48,24 +48,18 @@
                     <div class="card card-default">
                         <div class="card-body">
                             <div class="col-lg-12">
+
                                 <div class="row">
                                     <h4 class="bold">Today's Scheduled Meet</h4>
                                 </div>
+                                @foreach($data->today_apps as $app)
                                 <div class="row d-flex flex-row">
-                                    <p class="bold">Jatin Santosh Parmar </p>
+
+                                    <p class="bold">{{$app->first_name}} {{$app->last_name}}</p>
                                     <span class="ml-1 mr-1">at</span>
-                                    <p class="hint-text">4:30 PM</p>
+                                    <p class="hint-text">{{\Carbon\Carbon::parse($app->app_time)->format('h:i A')}}</p>
                                 </div>
-                                <div class="row d-flex flex-row">
-                                    <p class="bold">Rehman Deraiya </p>
-                                    <span class="ml-1 mr-1">at</span>
-                                    <p class="hint-text">5:30 PM</p>
-                                </div>
-                                <div class="row d-flex flex-row">
-                                    <p class="bold">Pratik Kawalkar </p>
-                                    <span class="ml-1 mr-1">at</span>
-                                    <p class="hint-text">6:30 PM</p>
-                                </div>
+                                @endforeach
                             </div>
 
                         </div>

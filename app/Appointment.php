@@ -17,4 +17,8 @@ class Appointment extends Model
     {
         $this->attributes['app_time'] = Carbon::createFromFormat('h:i A',$value);
     }
+    public function getAppTimeAttribute($value)
+    {
+      return Carbon::parse($value)->format('h:i A');
+    }
 }
