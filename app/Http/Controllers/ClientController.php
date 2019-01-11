@@ -78,4 +78,13 @@ class ClientController extends Controller
         $client = Client::findOrFail($id);
         return view('pages.health_update',compact('client'));
     }
+    public function edit($id)
+    {
+        $data = collect();
+        $client = Client::findOrFail($id);
+        $foodInfo = FoodTime::where('client_id',$id)->first();
+        $data->client = $client;
+        $data->food = $foodInfo;
+        return view('pages.edit_client_details',compact('data'));
+    }
 }

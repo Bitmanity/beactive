@@ -107,7 +107,7 @@
                                 "                                                    <a href=\"{{url('client_detail')}}/" + data + "\" class=\"header-icon fa fa-eye\"></a>\n" +
                                 "                                                </li>\n" +
                                 "                                                <li class=\"p-r-10 inline\">\n" +
-                                "                                                    <a href=\"#\" class=\"header-icon fa fa-edit\"></a>\n" +
+                                "                                                    <a href=\"{{url('edit_client_details')}}/"+data+"\" class=\"header-icon fa fa-edit\"></a>\n" +
                                 "                                                </li>\n" +
                                 "                                                <li class=\"p-r-10 inline\">\n" +
                                 "                                                    <a href=\"#\" class=\"header-icon fa fa-trash-o\"></a>\n" +
