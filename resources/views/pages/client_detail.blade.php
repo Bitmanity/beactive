@@ -683,7 +683,7 @@
                     {data: 'trun_sub_fat'},
                     {data: 'trun_ske_muscle'},
                     {data: 'leg_sub_fat'},
-                    {data: 'leg_ske_muscle'},
+                    {data: 'leg_ske_muscle'}
                 ]
             });
         });
