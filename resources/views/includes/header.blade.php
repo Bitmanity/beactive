@@ -39,8 +39,11 @@
                     <li class="">
                         <a href="{{route('appointments')}}"><span class="title">Appointments</span></a>
                     </li>
+                    <li class="">
+                        <a href="{{route('health_update')}}"><span class="title">Health Update</span></a>
+                    </li>
                 </ul>
-                <a class="search-link d-flex justify-content-between align-items-center d-lg-none" data-toggle="search" href="#">Tap here to search <i class="pg-search float-right"></i></a>
+                {{--<a class="search-link d-flex justify-content-between align-items-center d-lg-none" data-toggle="search" href="#">Tap here to search <i class="pg-search float-right"></i></a>--}}
             </div>
         </div>
     </div>

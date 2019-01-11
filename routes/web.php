@@ -30,6 +30,10 @@ Route::get('/view_client', function () {
     return view('pages.view_client');
 })->name('view_client');
 
+Route::get('/health_update', function () {
+    return view('pages.health_update');
+})->name('health_update');
+
 
 Auth::routes();
 
