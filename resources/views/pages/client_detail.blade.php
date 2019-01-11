@@ -115,8 +115,8 @@
                                                     </span>
 
                                     <div class="flex-1 full-width overflow-ellipsis">
-                                        <p data-toggle="modal" data-target="#myModal" class="hint-text    small no-margin overflow-ellipsis " style="cursor:pointer;">Click to Add New Schedule</p>
-                                        <h5 data-toggle="modal" data-target="#myModal" class="no-margin overflow-ellipsis " style="cursor:pointer;">After 3 Days</h5>
+                                        <p data-toggle="modal" data-target="#myModal" class="hint-text    small no-margin overflow-ellipsis " style="cursor:pointer;">Click to Add New Appt</p>
+                                        <h5 data-toggle="modal" data-target="#myModal" class="no-margin overflow-ellipsis " style="cursor:pointer;">Appt after 3 Days</h5>
                                     </div>
                                 </div>
                             </div>
