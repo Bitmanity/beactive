@@ -109,14 +109,14 @@
                         <div class="col-4">
                             <div class="p-t-15">
                                 <div class="d-flex">
-                                                    <span class="icon-thumbnail bg-master-light pull-left text-master"
+                                                    <span class="icon-thumbnail bg-info pull-left text-master"
                                                           data-toggle="modal" data-target="#myModal">
-                                                                <i class="fa fa-clock-o"></i>
+                                                                <i class="fa fa-hand-pointer-o text-white" style="cursor:pointer;"></i>
                                                     </span>
 
                                     <div class="flex-1 full-width overflow-ellipsis">
-                                        <p class="hint-text    small no-margin overflow-ellipsis ">Schedule Meet</p>
-                                        <h5 class="no-margin overflow-ellipsis ">After 3 Days</h5>
+                                        <p data-toggle="modal" data-target="#myModal" class="hint-text    small no-margin overflow-ellipsis " style="cursor:pointer;">Click to Add New Schedule</p>
+                                        <h5 data-toggle="modal" data-target="#myModal" class="no-margin overflow-ellipsis " style="cursor:pointer;">After 3 Days</h5>
                                     </div>
                                 </div>
                             </div>
