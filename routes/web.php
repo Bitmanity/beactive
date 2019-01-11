@@ -23,6 +23,9 @@ Route::post('/update_health/{id}','ClientBodyInfoController@form')->name('add_bo
 
 Route::post('add_appointment/{id}','AppointmentController@form')->name('add_appointment');
 
+//Dashboard Route
+Route::get('dashboard','DashboardController@data')->name('dashboard');
+
 Route::get('/add_client', function () {
     return view('pages.add_client');
 })->name('add_client');
