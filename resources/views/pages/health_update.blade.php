@@ -16,7 +16,6 @@
             <div class="col-lg-12">
                 <div class="card card-default">
                     <div class="card-header  separator">
-
                         <div class="row">
                             <div class="col-lg-12">
 
@@ -28,12 +27,8 @@
                                             <option value="client">Client 3</option>
                                         </select>
                                     </div>
-
                             </div>
                         </div>
-
-
-
                     </div>
                     <div class="card-body">
                         <h3>
@@ -181,7 +176,7 @@
                     </div>
                     <div class="card-footer">
                         <input class="btn btn-primary btn-cons btn-animated from-left fa fa-truck pull-left" type="submit">
-                            
+
                         </input>
                     </div>
                 </div>

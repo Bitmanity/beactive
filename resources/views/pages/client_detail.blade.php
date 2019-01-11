@@ -116,7 +116,10 @@
                                 <a href="#" data-toggle="tab" data-target="#fade3"><span>Other Details</span></a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" data-toggle="tab" data-target="#fade4"><span>Billing & History</span></a>
+                                <a href="#" data-toggle="tab" data-target="#fade4"><span>Diet Plan</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" data-toggle="tab" data-target="#fade5"><span>Billing & History</span></a>
                             </li>
                         </ul>
                         <!-- Tab panes -->
@@ -514,6 +517,32 @@
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="fade4">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="card card-default">
+                                            <div class="card-header ">
+                                                <div class="col-lg-12">
+                                                    <div class="row">
+                                                        <h4 class="bold mb-1">Diet Plan</h4>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="card-body ">
+                                                <div class="scrollable">
+                                                    <div class="demo-card-scrollable"
+                                                         style="max-height: 300px; min-height: 300px;">
+                                                        <div class="container">
+                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aspernatur delectus, dicta dolor dolorum exercitationem impedit maxime, nesciunt numquam, optio possimus quam sed vero. Aliquam culpa cum magni pariatur sunt.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="fade5">
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="card card-default">
