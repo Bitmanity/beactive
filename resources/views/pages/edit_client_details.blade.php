@@ -29,7 +29,7 @@
                 <div class="tab-pane padding-20 sm-no-padding active slide-left" id="tab1">
                     <div class="row">
                         <div class="col-3">
-                            <div class="m-l-30">
+                            <div class="m-l-30">a
                                 <div class="form-group form-group-default  form-group-default-selectFx">
                                     <label>Type</label>
                                     <select value="{{$data->client->client_type}}" name="client_type" class="cs-select cs-skin-slide cs-transparent form-control" data-init-plugin="cs-select">
@@ -689,3 +689,5 @@
     </script>
 
 @endsection
+
+
