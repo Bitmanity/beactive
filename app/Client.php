@@ -12,4 +12,8 @@ class Client extends Model
     {
         $this->attributes['dob'] = Carbon::createFromFormat('d/m/Y',$value);
     }
+    public function getDobAttribute($value)
+    {
+        return Carbon::createFromFormat('Y-m-d',$value)->format('d/m/Y');
+    }
 }

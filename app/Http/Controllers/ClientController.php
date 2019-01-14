@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Appointment;
 use App\Client;
-use App\ClientBodyInfo;
 use App\FoodTime;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -14,18 +13,18 @@ class ClientController extends Controller
 {
     public function form(Request $request)
     {
-
         $id = $request->get('id');
         $user = Auth::user();
-        if($id == null)
-        {
+        $body_info = true;
+        if ($id == null) {
             $client = new Client();
             $client->created_by = $user->id;
-        }
-        else
-        {
+
+        } else {
             $client = Client::findOrFail($id);
+            $body_info = false;
         }
+        $client->client_type = $request->client_type;
         $client->first_name = $request->first_name;
         $client->last_name = $request->last_name;
         $client->email = $request->email;
@@ -45,17 +44,17 @@ class ClientController extends Controller
         $client->balance = $request->balance;
         $client->diet_schedule = $request->diet_schedule;
         $client->updated_by = $user->id;
-        try{
+        try {
 
             $client->save();
-            ClientBodyInfoController::form($request,$client->id);
-            FoodInfoController::form($request,$client->id);
-        }
-        catch (Exception $exception)
-        {
+            if ($body_info) {
+                ClientBodyInfoController::form($request, $client->id);
+            }
+            FoodInfoController::form($request, $client->id);
+        } catch (Exception $exception) {
             dd($exception);
         }
-        return view('pages.add_client',['message'=>'Data Inserted Successfully']);
+        return redirect()->route('add_client')->with(['message'=>'Record Edited Successfully']);
     }
 
     public function list(Request $request)
@@ -64,27 +63,28 @@ class ClientController extends Controller
         return json_encode($query);
     }
 
-    public function show(Request $request,$id)
+    public function show(Request $request, $id)
     {
         $data = collect();
         $data->client = Client::findOrFail($id);
-        $data->foodInfo = FoodTime::where('client_id',$id)->first();
-        $data->app = Appointment::where('client_id',$id)->get();
-        return view('pages.client_detail',compact('data'));
+        $data->foodInfo = FoodTime::where('client_id', $id)->first();
+        $data->app = Appointment::where('client_id', $id)->get();
+        return view('pages.client_detail', compact('data'));
     }
 
     public function update_health($id)
     {
         $client = Client::findOrFail($id);
-        return view('pages.health_update',compact('client'));
+        return view('pages.health_update', compact('client'));
     }
+
     public function edit($id)
     {
         $data = collect();
         $client = Client::findOrFail($id);
-        $foodInfo = FoodTime::where('client_id',$id)->first();
+        $foodInfo = FoodTime::where('client_id', $id)->first();
         $data->client = $client;
         $data->food = $foodInfo;
-        return view('pages.edit_client_details',compact('data'));
+        return view('pages.edit_client_details', compact('data'));
     }
 }

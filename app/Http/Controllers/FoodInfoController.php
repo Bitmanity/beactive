@@ -11,10 +11,9 @@ class FoodInfoController extends Controller
 {
     public static function form(Request $request, $client_id)
     {
-        $id = $request->get('id');
+        $id = $request->get('food_time_id');
         $user = Auth::user();
         if ($id) {
-            $id = $request->get('client_body_info_id');
             $food_time = FoodTime::findOrFail($id);
         } else {
             $food_time = new FoodTime();
@@ -33,7 +32,14 @@ class FoodInfoController extends Controller
         $food_time->tired_time = $request->tired_time;
         $food_time->food_type = $request->food_type;
         $food_time->fav_snacks = $request->fav_snacks;
-        $food_time->drinks = implode(', ',$request->drinks);
+        try{
+
+            $food_time->drinks = implode(', ',$request->drinks);
+        }
+        catch (\Exception $exception)
+        {
+            $food_time->drinks = null;
+        }
         $food_time->water = $request->water;
         if ($request->is_smoking)
         {
@@ -69,6 +75,7 @@ class FoodInfoController extends Controller
         } catch (Exception $e) {
             dd($e);
         }
+
         return;
     }
 }

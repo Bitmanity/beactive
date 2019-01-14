@@ -8,6 +8,8 @@
 @section('content')
     <form action="{{route('client')}}" method="post">
         {{csrf_field()}}
+        <input type="hidden" value="{{$data->client->id}}" name="id">
+        <input type="hidden" value="{{$data->food->id}}" name="food_time_id">
         <div id="rootwizard" class="m-t-10">
             <!-- Nav tabs -->
             <ul class="nav nav-tabs nav-tabs-linetriangle nav-tabs-separator nav-stack-sm" role="tablist" data-init-reponsive-tabs="dropdownfx">
@@ -30,8 +32,8 @@
                                 <div class="form-group form-group-default  form-group-default-selectFx">
                                     <label>Type</label>
                                     <select value="{{$data->client->client_type}}" name="client_type" class="cs-select cs-skin-slide cs-transparent form-control" data-init-plugin="cs-select">
-                                        <option value="client" Selected>Client</option>
-                                        <option value="lead" Selected>Lead</option>
+                                        <option value="Client" Selected>Client</option>
+                                        <option value="Lead" Selected>Lead</option>
                                     </select>
                                 </div>
                             </div>
@@ -247,7 +249,7 @@
                                         <div class="col-6">
                                             <div class="form-group form-group-default form-group-default-select2">
                                                 <label>Drinks</label>
-                                                <select value="{{$data->food->drinks}}" name="drinks[]" class=" full-width" data-init-plugin="select2" multiple>
+                                                <select value="{{$data->food->drinks }}" name="drinks[]" class=" full-width" data-init-plugin="select2" multiple>
                                                     <option value="Tea">Tea</option>
                                                     <option value="Coffee">Coffee</option>
                                                     <option value="Alcohol">Alcohol</option>
@@ -411,7 +413,7 @@
                         </div>
                         <div class="col-md-6">
                             <div class="padding-30 sm-padding-5">
-                                <textarea value="{{$data->client->diet_schedule}}" id="summernote" name="diet_schedule">Diet Plan</textarea>
+                                <textarea  id="summernote" name="diet_schedule">{!!     $data->client->diet_schedule !!}</textarea>
                             </div>
                         </div>
                     </div>
