@@ -32,8 +32,8 @@
                                 <div class="form-group form-group-default  form-group-default-selectFx">
                                     <label>Type</label>
                                     <select value="{{$data->client->client_type}}" name="client_type" class="cs-select cs-skin-slide cs-transparent form-control" data-init-plugin="cs-select">
-                                        <option value="Client" Selected>Client</option>
-                                        <option value="Lead" Selected>Lead</option>
+                                        <option value="Client" {{$data->client->client_type == 'Client' ? 'selected' : '' }}>Client</option>
+                                        <option value="Lead" {{$data->client->client_type == 'Lead' ? 'selected' : '' }}>Lead</option>
                                     </select>
                                 </div>
                             </div>
@@ -97,7 +97,7 @@
                                 <div class="">
                                     <div class="form-group form-group-default ">
                                         <label>Address</label>
-                                        <input type="text" name="address" class="form-control" placeholder="Current address">
+                                        <input type="text" value="{{$data->client->address}}" name="address" class="form-control" placeholder="Current address">
                                     </div>
                                     <div class="row clearfix">
                                         <div class="col-sm-6">
@@ -284,7 +284,7 @@
                                         <div class="col-sm-6">
                                             <div class="form-group">
                                                 <div class="checkbox check-primary">
-                                                    <input value="{{$data->food->is_appetite}}" name="is_appetite" type="checkbox" value="1" id="appetite">
+                                                    <input name="is_appetite" type="checkbox" value="1" @if($data->food->is_appetite) checked @endif id="appetite">
                                                     <label for="appetite">Appetite</label>
                                                 </div>
                                             </div>
@@ -294,7 +294,7 @@
                                         <div class="col-sm-6">
                                             <div class="form-group">
                                                 <div class="checkbox check-primary">
-                                                    <input value="{{$data->food->is_digestion}}" name="is_digestion" type="checkbox" value="1" id="digestion">
+                                                    <input name="is_digestion" type="checkbox" @if($data->food->is_digestion) checked @endif value="1" id="digestion">
                                                     <label for="digestion">Digestion</label>
                                                 </div>
                                             </div>
@@ -302,7 +302,7 @@
                                         <div class="col-sm-6">
                                             <div class="form-group">
                                                 <div class="checkbox check-primary">
-                                                    <input value="{{$data->food->is_acidity}}" name="is_acidity" type="checkbox" value="1" id="acidity">
+                                                    <input name="is_acidity" @if($data->food->is_acidity) checked @endif type="checkbox" value="1" id="acidity">
                                                     <label for="acidity">Acidity</label>
                                                 </div>
                                             </div>
@@ -312,7 +312,7 @@
                                         <div class="col-sm-6">
                                             <div class="form-group">
                                                 <div class="checkbox check-primary">
-                                                    <input value="{{$data->food->is_medication}}" name="is_medication" type="checkbox" value="1" id="medication">
+                                                    <input name="is_medication" @if($data->food->is_medication) checked @endif type="checkbox" value="1" id="medication">
                                                     <label for="medication">Medication</label>
                                                 </div>
                                             </div>
@@ -320,7 +320,7 @@
                                         <div class="col-sm-6">
                                             <div class="form-group">
                                                 <div class="checkbox check-primary">
-                                                    <input value="{{$data->food->is_high_bp}}" name="is_high_bp" type="checkbox" value="1" id="highBP">
+                                                    <input name="is_high_bp" @if($data->food->is_high_bp) checked @endif type="checkbox" value="1" id="highBP">
                                                     <label for="highBP">High BP</label>
                                                 </div>
                                             </div>
@@ -331,7 +331,7 @@
                                         <div class="col-sm-6">
                                             <div class="form-group">
                                                 <div class="checkbox check-primary">
-                                                    <input value="{{$data->food->is_low_bp}}" name="is_low_bp" type="checkbox" value="1" id="LowBP">
+                                                    <input name="is_low_bp" @if($data->food->is_low_bp) checked @endif type="checkbox" value="1" id="LowBP">
                                                     <label for="LowBP">Low BP</label>
                                                 </div>
                                             </div>
