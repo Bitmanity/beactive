@@ -18,7 +18,7 @@
                     <div class="card card-default">
                         <div class="card-body">
                             <h4 class="bold">Total Client</h4>
-                            <h3></h3>
+                            <h3>{{$data->client_count}}</h3>
                         </div>
                     </div>
 
@@ -52,19 +52,22 @@
                                 <div class="row">
                                     <h4 class="bold">Today's Scheduled Meet</h4>
                                 </div>
+                                @if(count($data->today_apps)!=0)
                                 @foreach($data->today_apps as $app)
                                 <div class="row d-flex flex-row">
-
                                     <p class="bold">{{$app->first_name}} {{$app->last_name}}</p>
                                     <span class="ml-1 mr-1">at</span>
                                     <p class="hint-text">{{\Carbon\Carbon::parse($app->app_time)->format('h:i A')}}</p>
                                 </div>
                                 @endforeach
+                                @else
+                                    <div class="row d-flex flex-row">
+                                      <p>No Appointments Today</p>
+                                    </div>
+                                @endif
                             </div>
-
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>

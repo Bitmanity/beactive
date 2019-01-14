@@ -14,6 +14,7 @@ class DashboardController extends Controller
     {
         $data = collect();
         $data->entries_count = count(Client::all());
+        $data->client_count = Client::where('client_type','Client')->get()->count();
         $data->app_count = count(Appointment::all());
         $data->week_app_count =  Appointment::whereBetween('app_date',[Carbon::today()->startOfWeek(),Carbon::today()->endOfWeek()])->count();
         $data->week_pending_app_count =  Appointment::whereBetween('app_date',[Carbon::now()->startOfWeek(),Carbon::now()->endOfWeek()])
