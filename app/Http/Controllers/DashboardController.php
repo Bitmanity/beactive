@@ -20,7 +20,8 @@ class DashboardController extends Controller
         $data->week_pending_app_count =  Appointment::whereBetween('app_date',[Carbon::now()->startOfWeek(),Carbon::now()->endOfWeek()])
             ->where('is_done','No')
             ->count();
-        $data->today_apps = $this->query()->where('a.app_date',Carbon::today())->get();
+        $data->today_apps = $this->query()->whereBetween('a.app_date',[Carbon::now()->startOfWeek(),Carbon::now()->endOfWeek()])
+            ->where('is_done','No')->orderBy('a.app_date','asc')->get();
        return view('pages.index',compact('data'));
     }
 
@@ -29,7 +30,7 @@ class DashboardController extends Controller
         $query = DB::table('clients as c')
             ->leftJoin('appointments as a', 'c.id', 'a.client_id')
             ->select('c.id as client_id','c.first_name','c.last_name')
-            ->addSelect('a.app_time');
+            ->addSelect('a.app_time','a.id as appointment_id','a.app_date');
 
         return $query;
     }

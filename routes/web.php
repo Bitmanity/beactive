@@ -24,7 +24,12 @@ Route::group(['middleware'=>'auth'],function (){
 
     Route::post('add_appointment/{id}','AppointmentController@form')->name('add_appointment');
 
-//Dashboard Route
+    Route::get('app_list','AppointmentController@list')->name('appointment_list');
+    //Appointment Update Done Or Cancelled
+    Route::get('mark_app_done/{id}','AppointmentController@mark_done')->name('mark_app_done');
+    Route::get('mark_app_cancel/{id}','AppointmentController@mark_cancelled')->name('mark_app_cancel');
+
+    //Dashboard Route
     Route::get('dashboard','DashboardController@data')->name('dashboard');
 
     Route::get('/add_client', function () {

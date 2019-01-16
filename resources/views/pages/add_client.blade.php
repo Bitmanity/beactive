@@ -2,26 +2,33 @@
 
 @section('title', 'Add Client')
 @section('stylesheet')
-    <link media="screen" type="text/css" rel="stylesheet" href="{{asset('assets/plugins/summernote/css/summernote.css')}}">
+    <link media="screen" type="text/css" rel="stylesheet"
+          href="{{asset('assets/plugins/summernote/css/summernote.css')}}">
 
 @endsection
 @section('content')
-    <form action="{{route('client')}}" method="post">
-        {{csrf_field()}}
-        <div id="rootwizard" class="m-t-10">
-            <!-- Nav tabs -->
-            <ul class="nav nav-tabs nav-tabs-linetriangle nav-tabs-separator nav-stack-sm" role="tablist" data-init-reponsive-tabs="dropdownfx">
+
+    <div id="rootwizard" class="m-t-10">
+        <!-- Nav tabs -->
+        <form action="{{route('client')}}" id="main_form" autocomplete="off" method="post">
+            {{csrf_field()}}
+            <ul class="nav nav-tabs nav-tabs-linetriangle nav-tabs-separator nav-stack-sm" role="tablist"
+                data-init-reponsive-tabs="dropdownfx">
                 <li class="nav-item">
-                    <a class="active" data-toggle="tab" href="#tab1" data-target="#tab1" role="tab"><i class="fa fa-user tab-icon"></i> <span>Basic Details</span></a>
+                    <a class="active" data-toggle="tab" href="#tab1" data-target="#tab1" role="tab"><i
+                                class="fa fa-user tab-icon"></i> <span>Basic Details</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="" data-toggle="tab" href="#tab2" data-target="#tab2" role="tab"><i class="fa fa-cutlery tab-icon"></i> <span>Food & Time</span></a>
+                    <a class="" data-toggle="tab" href="#tab2" data-target="#tab2" role="tab"><i
+                                class="fa fa-cutlery tab-icon"></i> <span>Food & Time</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="" data-toggle="tab" href="#tab3" data-target="#tab3" role="tab"><i class="fa fa-info tab-icon"></i> <span>Body Info</span></a>
+                    <a class="" data-toggle="tab" href="#tab3" data-target="#tab3" role="tab"><i
+                                class="fa fa-info tab-icon"></i> <span>Body Info</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="" data-toggle="tab" href="#tab4" data-target="#tab4" role="tab"><i class="fa fa-clock-o tab-icon"></i> <span>Finish</span></a>
+                    <a class="" data-toggle="tab" href="#tab4" data-target="#tab4" role="tab"><i
+                                class="fa fa-clock-o tab-icon"></i> <span>Finish</span></a>
                 </li>
             </ul>
             <!-- Tab panes -->
@@ -32,7 +39,9 @@
                             <div class="m-l-30">
                                 <div class="form-group form-group-default  form-group-default-selectFx">
                                     <label>Type</label>
-                                    <select name="client_type" class="cs-select cs-skin-slide cs-transparent form-control" data-init-plugin="cs-select">
+                                    <select name="client_type"
+                                            class="cs-select cs-skin-slide cs-transparent form-control"
+                                            data-init-plugin="cs-select">
                                         <option value="client" Selected>Client</option>
                                         <option value="lead" Selected>Lead</option>
                                     </select>
@@ -70,11 +79,6 @@
                                     <div class="row">
                                         <div class="col-8">
                                             <div class="form-group form-group-default input-group">
-                                                <div class="cs-input-group-addon input-group-addon d-flex">
-                                                    <select class="cs-select cs-skin-slide cs-transparent" data-init-plugin="cs-select">
-                                                        <option data-countryCode="IN" value="91" Selected>India (+91)</option>
-                                                    </select>
-                                                </div>
                                                 <div class="form-input-group flex-1">
                                                     <label>Mobile Number</label>
                                                     <input type="number" name="mobile" class="form-control">
@@ -85,7 +89,7 @@
                                             <div class="form-group form-input-group form-group-default ">
                                                 <label>Date of Birth</label>
                                                 <div id="myDatepicker" class="input-group date">
-                                                    <input type="text" name="dob" class="form-control">
+                                                    <input type="text" name="dob" required class="form-control">
                                                     <span class="input-group-addon"><i class="fa fa-calendar"></i>
                                                                         </span>
                                                 </div>
@@ -102,17 +106,11 @@
                                 <div class="">
                                     <div class="form-group form-group-default ">
                                         <label>Address</label>
-                                        <input type="text" name="address" class="form-control" placeholder="Current address">
+                                        <input type="text" name="address" class="form-control"
+                                               placeholder="Current address">
                                     </div>
                                     <div class="row clearfix">
-                                        <div class="col-sm-6">
-                                            <div class="form-group form-group-default  form-group-default-selectFx">
-                                                <label>Country</label>
-                                                <select class="cs-select cs-skin-slide cs-transparent form-control" data-init-plugin="cs-select">
-                                                    <option data-countryCode="IN" value="91" Selected>India (+91)</option>
-                                                </select>
-                                            </div>
-                                        </div>
+
                                         <div class="col-sm-6">
                                             <div class="form-group form-group-default">
                                                 <label>City</label>
@@ -124,13 +122,13 @@
                                         <div class="col-8">
                                             <div class="form-group form-group-default ">
                                                 <label>State/Province</label>
-                                                <input type="text"  name="state" class="form-control">
+                                                <input type="text" name="state" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-4">
                                             <div class="form-group form-group-default">
                                                 <label>Pin code</label>
-                                                <input type="text"  name="zipcode" class="form-control">
+                                                <input type="text" name="zipcode" class="form-control">
                                             </div>
                                         </div>
                                     </div>
@@ -156,7 +154,8 @@
                                         <div class="col-4">
                                             <div class="form-group form-group-default input-group bootstrap-timepicker">
                                                 <label>Breakfast Time</label>
-                                                <input id="timepicker1" name="breakfast_time" type="text" class="form-control">
+                                                <input id="timepicker1" name="breakfast_time" type="text"
+                                                       class="form-control">
                                             </div>
                                         </div>
                                         <!-- <div class="col-4">
@@ -178,7 +177,8 @@
                                         <div class="col-4">
                                             <div class="form-group form-group-default input-group bootstrap-timepicker">
                                                 <label>Lunch Time</label>
-                                                <input id="timepicker2" name="lunch_time" type="text" class="form-control">
+                                                <input id="timepicker2" name="lunch_time" type="text"
+                                                       class="form-control">
                                             </div>
                                         </div>
                                     </div>
@@ -192,7 +192,8 @@
                                         <div class="col-4">
                                             <div class="form-group form-group-default input-group bootstrap-timepicker">
                                                 <label>Snacks Time</label>
-                                                <input id="timepicker3" name="snacks_time" type="text" class="form-control">
+                                                <input id="timepicker3" name="snacks_time" type="text"
+                                                       class="form-control">
                                             </div>
                                         </div>
                                     </div>
@@ -206,7 +207,8 @@
                                         <div class="col-4">
                                             <div class="form-group form-group-default input-group bootstrap-timepicker">
                                                 <label>Dinner Time</label>
-                                                <input id="timepicker4" name="dinner_time" type="text" class="form-control">
+                                                <input id="timepicker4" name="dinner_time" type="text"
+                                                       class="form-control">
                                             </div>
                                         </div>
                                     </div>
@@ -214,20 +216,21 @@
                                         <div class="col-4">
                                             <div class="form-group form-group-default input-group bootstrap-timepicker">
                                                 <label>Most Hungry Time</label>
-                                                <input id="timepicker5" name="hungry_time" type="text" class="form-control">
+                                                <input id="timepicker5" name="hungry_time" type="text"
+                                                       class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-4">
                                             <div class="form-group form-group-default input-group bootstrap-timepicker">
                                                 <label>Most Tired Time</label>
-                                                <input id="timepicker6" name="tired_time" type="text" class="form-control">
+                                                <input id="timepicker6" name="tired_time" type="text"
+                                                       class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-4"></div>
                                     </div>
                                 </div>
                                 <br>
-
 
 
                             </div>
@@ -241,7 +244,8 @@
                                         <div class="col-6">
                                             <div class="form-group form-group-default form-group-default-select2 ">
                                                 <label class="">Food Type</label>
-                                                <select name="food_type" class="full-width" data-placeholder="Select Country" data-init-plugin="select2">
+                                                <select name="food_type" class="full-width"
+                                                        data-placeholder="Select Country" data-init-plugin="select2">
                                                     <!-- <optgroup label="Alaskan/Hawaiian Time Zone"> -->
                                                     <option value='Veg'>Veg</option>
                                                     <option value='Non-Veg'>Non-Veg</option>
@@ -259,15 +263,16 @@
 
                                     <div class="row">
                                         <div class="col-6">
-                                            <div class="form-group form-group-default form-group-default-select2">
+                                            <div class="form-group form-group-default">
                                                 <label>Drinks</label>
-                                                <select name="drinks[]" class=" full-width" data-init-plugin="select2" multiple>
-                                                    <option value="Tea">Tea</option>
-                                                    <option value="Coffee">Coffee</option>
-                                                    <option value="Alcohol">Alcohol</option>
-                                                    <option value="Soft Drink">Soft Drink</option>
-                                                    <option value="Milk">Milk</option>
-                                                </select>
+                                                {{--<select name="drinks[]" class=" full-width" data-init-plugin="select2" multiple>--}}
+                                                {{--<option value="Tea">Tea</option>--}}
+                                                {{--<option value="Coffee">Coffee</option>--}}
+                                                {{--<option value="Alcohol">Alcohol</option>--}}
+                                                {{--<option value="Soft Drink">Soft Drink</option>--}}
+                                                {{--<option value="Milk">Milk</option>--}}
+                                                {{--</select>--}}
+                                                <input type="text" name="drinks" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-6">
@@ -324,7 +329,8 @@
                                         <div class="col-sm-6">
                                             <div class="form-group">
                                                 <div class="checkbox check-primary">
-                                                    <input name="is_medication" type="checkbox" value="1" id="medication">
+                                                    <input name="is_medication" type="checkbox" value="1"
+                                                           id="medication">
                                                     <label for="medication">Medication</label>
                                                 </div>
                                             </div>
@@ -413,9 +419,10 @@
                                     <div class="col-6">
                                         <div class="form-group form-group-default form-group-default-select2">
                                             <label class="">Energy Level</label>
-                                            <select name="energy" class="full-width" data-placeholder="Select Country" data-init-plugin="select2">
+                                            <select name="energy" class="full-width" data-placeholder="Select Country"
+                                                    data-init-plugin="select2">
                                                 <!-- <optgroup label="Alaskan/Hawaiian Time Zone"> -->
-                                                <option value="low">Low </option>
+                                                <option value="low">Low</option>
                                                 <option value="medium">Medium</option>
                                                 <option value="high">High</option>
                                                 <!-- </optgroup> -->
@@ -518,7 +525,8 @@
                                         <div class="col-6">
                                             <div class="form-group">
                                                 <div class="checkbox check-primary">
-                                                    <input name="is_exercising" type="checkbox" value="1" id="currentlyExercising">
+                                                    <input name="is_exercising" type="checkbox" value="1"
+                                                           id="currentlyExercising">
                                                     <label for="currentlyExercising">Currently Exercising</label>
                                                 </div>
                                             </div>
@@ -540,7 +548,8 @@
                                         <div class="col-6">
                                             <div class="form-group form-group-default">
                                                 <label>Advance</label>
-                                                <input name="advance" type="text" class="form-control">
+                                                <input name="advance" id="advance" onchange="update_total()"
+                                                       type="number" class="form-control">
                                             </div>
                                         </div>
 
@@ -549,13 +558,14 @@
                                         <div class="col-6">
                                             <div class="form-group form-group-default">
                                                 <label>Balance</label>
-                                                <input name="balance" type="text" class="form-control">
+                                                <input name="balance" id="balance" type="number"
+                                                       onchange="update_total()" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-6">
                                             <div class="form-group form-group-default">
                                                 <label>Total</label>
-                                                <input name="total" type="text" class="form-control">
+                                                <input name="total" id="total" type="number" class="form-control">
                                             </div>
                                         </div>
 
@@ -573,15 +583,17 @@
                 <div class="padding-20 sm-padding-5 sm-m-b-20 sm-m-t-20 bg-white clearfix">
                     <ul class="pager wizard no-style">
                         <li class="next">
-                            <button class="btn btn-primary btn-cons btn-animated from-left fa fa-truck pull-right" type="button">
+                            <button class="btn btn-primary btn-cons btn-animated from-left fa fa-truck pull-right"
+                                    type="button">
                                 <span>Next</span>
                             </button>
                         </li>
                         <li class="next finish hidden">
-                            <input class="btn btn-primary btn-cons btn-animated from-left fa fa-cog pull-right" type="submit" value="Finish">
+                            <button class="btn btn-primary btn-cons btn-animated from-left fa fa-cog pull-right">Finish</button>
                         </li>
                         <li class="previous first hidden">
-                            <button class="btn btn-default btn-cons btn-animated from-left fa fa-cog pull-right" type="button">
+                            <button class="btn btn-default btn-cons btn-animated from-left fa fa-cog pull-right"
+                                    type="button">
                                 <span>First</span>
                             </button>
                         </li>
@@ -597,20 +609,23 @@
                         The Top Content Is Soley Created using pages UI Elements such as Invoice, Tabs, Form Layouts etc. and are prior for representation Purpose Only.
                     </p> -->
                     <div class="pull-right">
-                        <img src="assets/img/logo.png" alt="logo" data-src="assets/img/logo.png" data-src-retina="assets/img/logo_2x.png" width="78" height="22">
+                        <img src="assets/img/logo.png" alt="logo" data-src="assets/img/logo.png"
+                             data-src-retina="assets/img/logo_2x.png" width="78" height="22">
                     </div>
                     <div class="clearfix"></div>
                 </div>
+
             </div>
-        </div>
-    </form>
+        </form>
+    </div>
+
 @endsection
 
 @section('script')
-    <script type="text/javascript" src="assets/plugins/summernote/js/summernote.min.js"></script>
+    <script type="text/javascript" src="{{asset('assets/plugins/summernote/js/summernote.min.js')}}"></script>
 
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             $('.date').datepicker({
                 format: 'dd/mm/yyyy'
             });
@@ -623,7 +638,20 @@
                 ['para', ['ul', 'ol', 'paragraph']],
 
             ],
-            height:250
+            height: 250
+        });
+
+        function update_total() {
+            let total = Number($('#balance').val()) + Number($('#advance').val());
+            $('#total').val(total);
+        }
+
+        $('#main_form').on('keyup keypress', function(e) {
+            var keyCode = e.keyCode || e.which;
+            if (keyCode === 13) {
+                e.preventDefault();
+                return false;
+            }
         });
     </script>
     <!-- <script type="text/javascript">
@@ -635,7 +663,7 @@
     <script>
         $('#timepicker1').timepicker({
             defaultTime: '08:45 AM'
-        }).on('show.timepicker', function(e) {
+        }).on('show.timepicker', function (e) {
             var widget = $('.bootstrap-timepicker-widget');
             widget.find('.glyphicon-chevron-up').removeClass().addClass('pg-arrow_maximize');
             widget.find('.glyphicon-chevron-down').removeClass().addClass('pg-arrow_minimize');
@@ -645,7 +673,7 @@
     <script>
         $('#timepicker2').timepicker({
             defaultTime: '01:15 PM'
-        }).on('show.timepicker', function(e) {
+        }).on('show.timepicker', function (e) {
             var widget = $('.bootstrap-timepicker-widget');
             widget.find('.glyphicon-chevron-up').removeClass().addClass('pg-arrow_maximize');
             widget.find('.glyphicon-chevron-down').removeClass().addClass('pg-arrow_minimize');
@@ -654,7 +682,7 @@
     <script>
         $('#timepicker3').timepicker({
             defaultTime: '05:30 PM'
-        }).on('show.timepicker', function(e) {
+        }).on('show.timepicker', function (e) {
             var widget = $('.bootstrap-timepicker-widget');
             widget.find('.glyphicon-chevron-up').removeClass().addClass('pg-arrow_maximize');
             widget.find('.glyphicon-chevron-down').removeClass().addClass('pg-arrow_minimize');
@@ -663,7 +691,7 @@
     <script>
         $('#timepicker4').timepicker({
             defaultTime: '10:00 PM'
-        }).on('show.timepicker', function(e) {
+        }).on('show.timepicker', function (e) {
             var widget = $('.bootstrap-timepicker-widget');
             widget.find('.glyphicon-chevron-up').removeClass().addClass('pg-arrow_maximize');
             widget.find('.glyphicon-chevron-down').removeClass().addClass('pg-arrow_minimize');
@@ -672,7 +700,7 @@
     <script>
         $('#timepicker5').timepicker({
             defaultTime: '10:00 PM'
-        }).on('show.timepicker', function(e) {
+        }).on('show.timepicker', function (e) {
             var widget = $('.bootstrap-timepicker-widget');
             widget.find('.glyphicon-chevron-up').removeClass().addClass('pg-arrow_maximize');
             widget.find('.glyphicon-chevron-down').removeClass().addClass('pg-arrow_minimize');
@@ -681,7 +709,7 @@
     <script>
         $('#timepicker6').timepicker({
             defaultTime: '10:00 PM'
-        }).on('show.timepicker', function(e) {
+        }).on('show.timepicker', function (e) {
             var widget = $('.bootstrap-timepicker-widget');
             widget.find('.glyphicon-chevron-up').removeClass().addClass('pg-arrow_maximize');
             widget.find('.glyphicon-chevron-down').removeClass().addClass('pg-arrow_minimize');

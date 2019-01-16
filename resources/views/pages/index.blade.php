@@ -50,19 +50,29 @@
                             <div class="col-lg-12">
 
                                 <div class="row">
-                                    <h4 class="bold">Today's Scheduled Meet</h4>
+                                    <h4 class="bold">Weekly Scheduled Appointments</h4>
                                 </div>
                                 @if(count($data->today_apps)!=0)
                                 @foreach($data->today_apps as $app)
                                 <div class="row d-flex flex-row">
                                     <p class="bold">{{$app->first_name}} {{$app->last_name}}</p>
+                                    <span class="ml-1 mr-1">on</span>
+                                    <p class="semi-bold"> {{\Carbon\Carbon::createFromFormat('Y-m-d',$app->app_date)->toFormattedDateString()}}</p>
                                     <span class="ml-1 mr-1">at</span>
                                     <p class="hint-text">{{\Carbon\Carbon::parse($app->app_time)->format('h:i A')}}</p>
+                                    <p class="pull-right m-l-30"><ul class="d-lg-inline-block d-none notification-list no-margin  no-style">
+                                        <li class="p-r-10 inline">
+                                            <a href="{{route('mark_app_done',$app->appointment_id)}}" class="header-icon fa fa-check-circle"></a>
+                                        </li>
+                                        <li class="p-r-10 inline">
+                                            <a href="{{route('mark_app_cancel',$app->appointment_id)}}" class="header-icon fa fa-times-circle"></a>
+                                        </li>
+                                    </ul></p>
                                 </div>
                                 @endforeach
                                 @else
                                     <div class="row d-flex flex-row">
-                                      <p>No Appointments Today</p>
+                                      <p>No Appointments this Week</p>
                                     </div>
                                 @endif
                             </div>

@@ -57,7 +57,8 @@
                                             <div class="col-6">
                                                 <div class="form-group form-group-default input-group bootstrap-timepicker">
                                                     <label>Appointment Time</label>
-                                                    <input id="timepicker1"  name="app_time" type="text" class="form-control">
+                                                    <input id="timepicker1" name="app_time" type="text"
+                                                           class="form-control">
                                                 </div>
                                             </div>
                                         </div>
@@ -111,12 +112,17 @@
                                 <div class="d-flex">
                                                     <span class="icon-thumbnail bg-info pull-left text-master"
                                                           data-toggle="modal" data-target="#myModal">
-                                                                <i class="fa fa-hand-pointer-o text-white" style="cursor:pointer;"></i>
+                                                                <i class="fa fa-hand-pointer-o text-white"
+                                                                   style="cursor:pointer;"></i>
                                                     </span>
 
                                     <div class="flex-1 full-width overflow-ellipsis">
-                                        <p data-toggle="modal" data-target="#myModal" class="hint-text    small no-margin overflow-ellipsis " style="cursor:pointer;">Click to Add New Appt</p>
-                                        <h5 data-toggle="modal" data-target="#myModal" class="no-margin overflow-ellipsis " style="cursor:pointer;">Appt after 3 Days</h5>
+                                        <p data-toggle="modal" data-target="#myModal"
+                                           class="hint-text    small no-margin overflow-ellipsis "
+                                           style="cursor:pointer;">Click to Add New Appt</p>
+                                        <h5 data-toggle="modal" data-target="#myModal"
+                                            class="no-margin overflow-ellipsis " style="cursor:pointer;">Appt after 3
+                                            Days</h5>
                                     </div>
                                 </div>
                             </div>
@@ -337,7 +343,8 @@
                                                             <tr>
                                                                 <td class="fs-14 w-50">Water Intake</td>
                                                                 <td class=" text-left w-50 b-l b-dashed b-grey">
-                                                                    <span class="fs-18">{{$data->foodInfo->water}} Liter</span>
+                                                                    <span class="fs-18">{{$data->foodInfo->water}}
+                                                                        Liter</span>
                                                                 </td>
 
                                                             </tr>
@@ -345,7 +352,7 @@
                                                                 <td class="fs-14 w-50">Smoking</td>
                                                                 <td class=" text-left w-50 b-l b-dashed b-grey">
                                                                     @if($data->foodInfo->is_smoking)
-                                                                    <span class="fs-18">Yes</span>
+                                                                        <span class="fs-18">Yes</span>
                                                                     @else
                                                                         <span class="fs-18">No</span>
                                                                     @endif
@@ -453,7 +460,7 @@
                                                             <tr>
                                                                 <td class="fs-14 w-50">DOB</td>
                                                                 <td class=" text-left w-50 b-l b-dashed b-grey">
-                                                                    <span class="fs-18">{{\Carbon\Carbon::createFromFormat('Y-m-d',$data->client->dob)->toFormattedDateString()}}</span>
+                                                                    <span class="fs-18">{{\Carbon\Carbon::createFromFormat('d/m/Y',$data->client->dob)->toFormattedDateString()}}</span>
                                                                 </td>
 
 
@@ -625,9 +632,10 @@
                                                         <table class="table table-hover">
                                                             <tbody>
                                                             @foreach($data->app as $appointment)
-                                                            <tr>
-                                                                <td class="fs-14 w-50">{{\Carbon\Carbon::createFromFormat('Y-m-d',$appointment->app_date)->toFormattedDateString()}}</td>
-                                                            </tr>
+                                                                <tr>
+                                                                    <td class="fs-14 w-50">{{\Carbon\Carbon::createFromFormat('Y-m-d',$appointment->app_date)->toFormattedDateString()}}</td>
+                                                                    <td class="fs-14 w-50">{{$appointment->appointment_status}}</td>
+                                                                </tr>
                                                             @endforeach
                                                             </tbody>
                                                         </table>
@@ -660,7 +668,7 @@
                     "sLengthMenu": "_MENU_ ",
                     "sInfo": "Showing <b>_START_ to _END_</b> of _TOTAL_ entries"
                 },
-                "iDisplayLength": 10,
+                "iDisplayLength": 3,
                 "deferRender": true,
                 ajax: {
                     url: '{{route('client_body_info',$data->client->id)}}',

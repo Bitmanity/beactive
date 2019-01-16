@@ -89,7 +89,7 @@
                     dataSrc: ''
                 },
                 columns: [
-                    {data: 'id'},
+                    {data: 'client_type'},
                     {data: concat},
                     {data: 'mobile'},
                     {data: 'email'},
@@ -108,9 +108,6 @@
                                 "                                                </li>\n" +
                                 "                                                <li class=\"p-r-10 inline\">\n" +
                                 "                                                    <a href=\"{{url('edit_client_details')}}/"+data+"\" class=\"header-icon fa fa-edit\"></a>\n" +
-                                "                                                </li>\n" +
-                                "                                                <li class=\"p-r-10 inline\">\n" +
-                                "                                                    <a href=\"#\" class=\"header-icon fa fa-trash-o\"></a>\n" +
                                 "                                                </li>\n" +
                                 "                                            </ul>"
                         }

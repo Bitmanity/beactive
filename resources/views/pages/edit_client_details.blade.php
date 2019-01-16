@@ -144,7 +144,7 @@
                                         <div class="col-4">
                                             <div class="form-group form-group-default input-group bootstrap-timepicker">
                                                 <label>Breakfast Time</label>
-                                                <input value="{{$data->food->breakfast_time}}" id="timepicker1" name="breakfast_time" type="text" class="form-control">
+                                                <input value="{{\Carbon\Carbon::createFromFormat('H:i:s',$data->food->breakfast_time)->format('h:i A')}}" id="timepicker1" name="breakfast_time" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <!-- <div class="col-4">
@@ -180,7 +180,7 @@
                                         <div class="col-4">
                                             <div class="form-group form-group-default input-group bootstrap-timepicker">
                                                 <label>Snacks Time</label>
-                                                <input value="{{$data->food->snacks_time}}" id="timepicker3" name="snacks_time" type="text" class="form-control">
+                                                <input value="{{\Carbon\Carbon::createFromFormat('H:i:s',$data->food->snacks_time)->format('h:i A')}}" id="timepicker3" name="snacks_time" type="text" class="form-control">
                                             </div>
                                         </div>
                                     </div>
@@ -194,7 +194,7 @@
                                         <div class="col-4">
                                             <div class="form-group form-group-default input-group bootstrap-timepicker">
                                                 <label>Dinner Time</label>
-                                                <input value="{{$data->food->dinner_time}}" id="timepicker4" name="dinner_time" type="text" class="form-control">
+                                                <input value="{{\Carbon\Carbon::createFromFormat('H:i:s',$data->food->dinner_time)->format('h:i A')}}" id="timepicker4" name="dinner_time" type="text" class="form-control">
                                             </div>
                                         </div>
                                     </div>
@@ -202,13 +202,13 @@
                                         <div class="col-4">
                                             <div class="form-group form-group-default input-group bootstrap-timepicker">
                                                 <label>Most Hungry Time</label>
-                                                <input value="{{$data->food->hungry_time}}" id="timepicker5" name="hungry_time" type="text" class="form-control">
+                                                <input value="{{\Carbon\Carbon::createFromFormat('H:i:s',$data->food->hungry_time)->format('h:i A')}}" id="timepicker5" name="hungry_time" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-4">
                                             <div class="form-group form-group-default input-group bootstrap-timepicker">
                                                 <label>Most Tired Time</label>
-                                                <input value="{{$data->food->tired_time}}" id="timepicker6" name="tired_time" type="text" class="form-control">
+                                                <input value="{{\Carbon\Carbon::createFromFormat('H:i:s',$data->food->tired_time)->format('h:i A')}}" id="timepicker6" name="tired_time" type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-4"></div>
@@ -247,15 +247,16 @@
 
                                     <div class="row">
                                         <div class="col-6">
-                                            <div class="form-group form-group-default form-group-default-select2">
+                                            <div class="form-group form-group-default">
                                                 <label>Drinks</label>
-                                                <select value="{{$data->food->drinks }}" name="drinks[]" class=" full-width" data-init-plugin="select2" multiple>
-                                                    <option value="Tea">Tea</option>
-                                                    <option value="Coffee">Coffee</option>
-                                                    <option value="Alcohol">Alcohol</option>
-                                                    <option value="Soft Drink">Soft Drink</option>
-                                                    <option value="Milk">Milk</option>
-                                                </select>
+                                                {{--<select value="{{$data->food->drinks }}" name="drinks[]" class=" full-width" data-init-plugin="select2" multiple>--}}
+                                                    {{--<option value="Tea">Tea</option>--}}
+                                                    {{--<option value="Coffee">Coffee</option>--}}
+                                                    {{--<option value="Alcohol">Alcohol</option>--}}
+                                                    {{--<option value="Soft Drink">Soft Drink</option>--}}
+                                                    {{--<option value="Milk">Milk</option>--}}
+                                                {{--</select>--}}
+                                                <input value="{{$data->food->drinks}}" type="text" name="drinks" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-6">
@@ -276,7 +277,7 @@
                                         <div class="col-6">
                                             <div class="form-group">
                                                 <div class="checkbox check-primary">
-                                                    <input value="{{$data->food->is_smoking}}" type="checkbox" name="is_smoking" value="1" id="smoking">
+                                                    <input @if($data->food->is_smoking) checked @endif type="checkbox" name="is_smoking" value="1" id="smoking">
                                                     <label for="smoking">Smoking</label>
                                                 </div>
                                             </div>
@@ -366,7 +367,7 @@
                                         <div class="col-6">
                                             <div class="form-group">
                                                 <div class="checkbox check-primary">
-                                                    <input value="{{$data->client->is_exercising}}" name="is_exercising" type="checkbox" value="1" id="currentlyExercising">
+                                                    <input @if($data->client->is_exercising) checked @endif name="is_exercising" type="checkbox" value="1" id="currentlyExercising">
                                                     <label  for="currentlyExercising">Currently Exercising</label>
                                                 </div>
                                             </div>
