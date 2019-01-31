@@ -16,7 +16,10 @@
                 <button aria-expanded="false" aria-haspopup="true" class="profile-dropdown-toggle" data-toggle="dropdown" type="button"><span class="thumbnail-wrapper d32 circular inline sm-m-r-5"><img alt="" data-src="assets/img/profiles/avatar.jpg" data-src-retina="assets/img/profiles/avatar_small2x.jpg" height="32" src="assets/img/profiles/avatar.jpg" width="32"></span></button>
                 <div class="dropdown-menu dropdown-menu-right profile-dropdown" role="menu">
                     <!-- <a class="dropdown-item" href="#"><i class="pg-settings_small"></i> Settings</a> <a class="dropdown-item" href="#"><i class="pg-outdent"></i> Feedback</a> <a class="dropdown-item" href="#"><i class="pg-signals"></i> Help</a> -->
-                    <a class="clearfix bg-master-lighter dropdown-item" href="#"><span class="pull-left">Logout</span> <span class="pull-right"><i class="pg-power"></i></span></a>
+                    <a class="clearfix bg-master-lighter dropdown-item" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();"><span class="pull-left">Logout</span> <span class="pull-right"><i class="pg-power"></i></span></a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;"></form>
+                    @csrf
                 </div>
             </div>
             <!-- END User Info-->

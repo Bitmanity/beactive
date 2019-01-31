@@ -12,6 +12,7 @@ class AppointmentController extends Controller
 {
     public function form(Request $request,$id)
     {
+
         $message = "Appointment Added Successfully";
         $user = Auth::user();
         $appointment = new Appointment();
