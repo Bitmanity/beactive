@@ -30,16 +30,16 @@
             <div class="menu-bar header-sm-height" data-hide-extra-li="4" data-pages-init='horizontal-menu'>
                 <a class="btn-link toggle-sidebar d-lg-none pg pg-close" data-toggle="horizontal-menu" href="#"></a>
                 <ul>
-                    <li class="{{ (Request::is('/') ? 'active' : '') }}">
+                    <li class="{{ (Request::is('dashboard') ? 'active' : '') }}">
                         <a href="{{route('index')}}" class="text-black">Dashboard</a>
                     </li>
-                    <li {{ (Request::is('add_client') || Request::is('add_client/*') ? 'active' : '') }}>
+                    <li class="{{ (Request::is('add_client') || Request::is('add_client/*') ? 'active' : '') }}">
                         <a href="{{route('add_client')}}" class="text-black"><span class="title">Add Client</span></a>
                     </li>
-                    <li {{ (Request::is('view_client') || Request::is('view_client/*') ? 'active' : '') }}>
+                    <li class="{{ (Request::is('view_client') || Request::is('view_client/*') ? 'active' : '') }}">
                         <a href="{{route('view_client')}}" class="text-black"><span class="title">View Clients</span></a>
                     </li>
-                    <li {{ (Request::is('appointments') || Request::is('appointments/*') ? 'active' : '') }}>
+                    <li class="{{ (Request::is('appointments') || Request::is('appointments/*') ? 'active' : '') }}">
                         <a href="{{route('appointments')}}" class="text-black"><span class="title">Appointments</span></a>
                     </li>
                 </ul>
